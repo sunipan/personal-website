@@ -3,7 +3,7 @@ import { HeaderProps } from './Header.types';
 
 export const Header = ({ title, description, commentStyle }: HeaderProps) => {
   return (
-    <div className="flex h-[60vh] flex-col items-center justify-center">
+    <div className="z-10 flex h-[60vh] flex-col items-center justify-center">
       <div>
         <div className="flex flex-row items-center justify-center">
           <div className="slide-right flex w-6 shrink-0 items-center text-gray-200 opacity-0 xs:mr-1 xs:w-[30px] md:mr-2 md:w-10 lg:w-16">

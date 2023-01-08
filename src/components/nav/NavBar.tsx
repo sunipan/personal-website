@@ -27,8 +27,8 @@ export const NavBar = () => {
   };
 
   return (
-    <nav className="sticky top-0">
-      <div className="absolute z-50 flex h-16 w-full flex-row items-center justify-between bg-[#1a1a1a] px-10 text-white">
+    <nav className="fixed top-0 z-50 w-full">
+      <div className="relative z-50 flex h-16 w-full flex-row items-center justify-between bg-[#1a1a1a] px-10 text-white">
         <div className="text-2xl hover:text-yellow-200">
           <Link href="/">
             <a>
@@ -73,7 +73,7 @@ export const NavBar = () => {
         ref={navRef}
         className={`${
           showDropdown ? 'slide-down' : navHasBeenClicked ? 'slide-up' : '-top-48'
-        } code-font absolute z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[#202020] py-5 text-white`}
+        } code-font relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[#202020] py-5 text-white`}
       >
         <Link href="/work">
           <a className="hover:text-yellow-200">Work</a>
