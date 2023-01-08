@@ -11,6 +11,7 @@ export const NavBar = () => {
   /* Hooks */
   const name = useNameTyping();
   const navRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   /* Lifecycle */
   useEffect(() => {
@@ -20,10 +21,8 @@ export const NavBar = () => {
 
   /* Handlers */
   const handleClickOutside = (e: { target: any }) => {
-    if (!navRef.current?.contains(e.target)) {
-      if (showDropdown) {
-        setShowDropdown(false);
-      }
+    if (!navRef.current?.contains(e.target) && !buttonRef.current?.contains(e.target)) {
+      if (showDropdown) setShowDropdown(false);
     }
   };
 
@@ -43,6 +42,7 @@ export const NavBar = () => {
         </div>
         <div className="flex items-center justify-center lg:hidden">
           <button
+            ref={buttonRef}
             onClick={() => {
               setShowDropdown(!showDropdown);
               setNavHasBeenClicked(true);
@@ -70,26 +70,20 @@ export const NavBar = () => {
         </div>
       </div>
       <div
+        ref={navRef}
         className={`${
           showDropdown ? 'slide-down' : navHasBeenClicked ? 'slide-up' : '-top-48'
-        } absolute z-10 flex w-full flex-col items-center justify-center overflow-hidden text-center text-white`}
+        } code-font absolute z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[#202020] py-5 text-white`}
       >
-        <div className="code-font w-full bg-[#202020] py-4">
-          <Link href="/work">
-            <a className="hover:text-yellow-200">Work</a>
-          </Link>
-        </div>
-
-        <div className="code-font w-full bg-[#202020] py-4">
-          <Link href="/about">
-            <a className="hover:text-yellow-200">About</a>
-          </Link>
-        </div>
-        <div className="code-font w-full bg-[#202020] py-4">
-          <Link href="/contact">
-            <a className="hover:text-yellow-200">Contact</a>
-          </Link>
-        </div>
+        <Link href="/work">
+          <a className="hover:text-yellow-200">Work</a>
+        </Link>
+        <Link href="/about">
+          <a className="hover:text-yellow-200">About</a>
+        </Link>
+        <Link href="/contact">
+          <a className="hover:text-yellow-200">Contact</a>
+        </Link>
       </div>
     </nav>
   );
