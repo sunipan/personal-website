@@ -26,6 +26,11 @@ export const NavBar = () => {
     }
   };
 
+  const handleClickDropdown = () => {
+    setShowDropdown(!showDropdown);
+    setNavHasBeenClicked(true);
+  };
+
   return (
     <nav className="fixed top-0 z-50 w-full">
       <div className="relative z-50 flex h-16 w-full flex-row items-center justify-between bg-[#1a1a1a] px-10 text-white">
@@ -41,13 +46,7 @@ export const NavBar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-center lg:hidden">
-          <button
-            ref={buttonRef}
-            onClick={() => {
-              setShowDropdown(!showDropdown);
-              setNavHasBeenClicked(true);
-            }}
-          >
+          <button ref={buttonRef} onClick={handleClickDropdown}>
             <Image src="/assets/menu.svg" width={30} height={30} alt="" />
           </button>
         </div>
