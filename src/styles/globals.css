@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=general-sans@500,400&display=swap');
 
 @tailwind base;
@@ -7,14 +7,46 @@
 
 @layer base {
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'General Sans', sans-serif;
   }
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.code-font {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.blinker {
+  animation: blinker 1s infinite;
+}
+
 .expand-section {
-  animation: open 1s ease-in-out;
-  font-family: 'General Sans', sans-serif;
+  animation: open 1s cubic-bezier(0.33, 0.18, 0, 1.01);
   font-weight: 500;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 }
 
 .bar-slide {
@@ -22,12 +54,67 @@
   animation-fill-mode: forwards;
 }
 
+.slide-down {
+  animation: slideDown 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 .slide-right {
   animation: slideRight 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
 
 .slide-left {
   animation: slideLeft 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+.comment-slide {
+  animation: commentSlide 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(64px);
+  }
+  100% {
+    transform: translateY(-104px);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-104px);
+  }
+  100% {
+    transform: translateY(64px);
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes commentSlide {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes barSlide {
@@ -73,13 +160,10 @@
 @keyframes open {
   0% {
     width: 0;
+    opacity: 0;
   }
   100% {
     width: 100%;
+    opacity: 1;
   }
-}
-
-h1 {
-  margin: 0 !important;
-  padding: 0 !important;
 }

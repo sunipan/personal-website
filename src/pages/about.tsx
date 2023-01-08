@@ -7,9 +7,9 @@ const Home: NextPage = () => {
     <>
       <Layout className="min-h-screen bg-[#1a1a1a]">
         <Header
-          title="Sebi Unipan"
+          title="About"
           commentStyle
-          description="I'm a curious Full Stack developer who loves to learn new things"
+          description="A little bit about me, my background, skills and interests"
         />
       </Layout>
     </>
