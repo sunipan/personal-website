@@ -72,7 +72,7 @@ export const NavBar = () => {
       <div
         ref={navRef}
         className={`${
-          showDropdown ? 'slide-down' : navHasBeenClicked ? 'slide-up' : '-top-48'
+          showDropdown ? 'slide-down' : navHasBeenClicked ? 'slide-up' : 'hidden'
         } code-font relative z-10 flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-[#202020] py-5 text-white`}
       >
         <Link href="/work">
