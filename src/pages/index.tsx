@@ -75,9 +75,9 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="skills h-[50vh] w-full max-w-4xl">
+          <div className="skills h-[100vh] w-full max-w-4xl">
             <div className="text-center text-2xl text-white">I can do</div>
-            <div className="relative h-full w-full">
+            <div className="relative h-1/2 w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
                   <div className="mb-3 flex flex-row gap-3">
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                   <div className="border-b-2 border-gray-200 pt-2"></div>
                   <div className="flex h-full flex-col items-center justify-center pb-7">
                     <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
-                    <div className="pb-text-base pt-5 text-center xs:text-lg md:text-[24px]">
+                    <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
                       I have years of experience building applications with React, HTML, and CSS. I
                       can quickly build and design UIs that are meaningful, engaging, and optimized.
                     </div>
@@ -105,10 +105,10 @@ const Home: NextPage = () => {
                   <div className="border-b-2 border-dark pt-2"></div>
                   <div className="flex h-full flex-col items-center justify-center pb-7">
                     <h1 className="w-full pt-2 text-center text-4xl font-bold">Back End</h1>
-                    <div className="pb-text-base pt-5 text-center xs:text-lg md:text-[24px]">
+                    <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
                       Skilled in Node.js backends utilizing frameworks like NestJS and Next.js. Can
                       fully utilize either relational or non-relational databases into a smooth
-                      working RESTful API.
+                      RESTful API.
                     </div>
                   </div>
                 </div>
