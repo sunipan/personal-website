@@ -12,7 +12,6 @@ const Home: NextPage = () => {
   /* State */
   const main = useRef<HTMLDivElement>(null);
   useIsomorphicLayoutEffect(() => {
-    gsap.set('.skills', { transformStyle: 'preserve-3d', perspective: 1000 });
     const ctx = gsap.context(() => {
       gsap.from('.hello', {
         opacity: 0,
@@ -20,19 +19,25 @@ const Home: NextPage = () => {
         duration: 1,
         smoothOrigin: true,
       });
-      gsap.to('.skills', {
-        duration: 1,
-        rotationX: 180,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          trigger: '.skills',
-          pin: true,
-          scrub: true,
-          start: 'top top',
-          end: 'bottom bottom',
-          markers: true,
-        },
-      });
+      gsap.set('.skills', { transformStyle: 'preserve-3d', perspective: 1000 });
+      const q = gsap.utils.selector('.skills');
+      const front = q('.front');
+      const back = q('.back');
+      gsap.set(back, { rotationX: -180 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '.skills',
+            start: 'top 20%',
+            scrub: true,
+            pin: true,
+          },
+        })
+        .to(front, { duration: 1, rotationX: 180 })
+        .to(back, { duration: 1, rotationX: 0 }, 0)
+        .to('.skills', { z: 50 }, 0)
+        .to('.skills', { z: 0 }, 0.5);
     }, main);
 
     return () => ctx.revert();
@@ -46,10 +51,10 @@ const Home: NextPage = () => {
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
-        <div ref={main}>
+        <div ref={main} className="flex flex-col gap-48">
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
-              <h1 className="mb-5 text-[26px] font-bold text-white xs:text-[28px] md:text-[40px] lg:text-[52px]">
+              <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
                 Hi, I&apos;m Sebi Unipan 👋
               </h1>
               <div className={`rounded-xl bg-light p-5 text-green-600`}>
@@ -70,10 +75,46 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="skills relative h-96 w-96 bg-gray-200">
-          <div className="backface-hidden absolute h-full w-full bg-blue-500">hello</div>
-          <div className="backface-hidden absolute h-full w-full bg-red-500">goodbye</div>
+          <div className="skills h-[50vh] w-full max-w-4xl">
+            <div className="text-center text-2xl text-white">I can do</div>
+            <div className="relative h-full w-full">
+              <div className="backface-hidden front absolute inset-0 m-7">
+                <div className="h-full rounded-xl bg-white p-5">
+                  <div className="mb-3 flex flex-row gap-3">
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
+                  </div>
+                  <div className="border-b-2 border-gray-200 pt-2"></div>
+                  <div className="flex h-full flex-col items-center justify-center pb-7">
+                    <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
+                    <div className="pb-text-base pt-5 text-center xs:text-lg md:text-[24px]">
+                      I have years of experience building applications with React, HTML, and CSS. I
+                      can quickly build and design UIs that are meaningful, engaging, and optimized.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="backface-hidden back absolute inset-0 m-7">
+                <div className="h-full rounded-xl bg-light p-5 text-white">
+                  <div className="mb-3 flex flex-row gap-3">
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
+                  </div>
+                  <div className="border-b-2 border-dark pt-2"></div>
+                  <div className="flex h-full flex-col items-center justify-center pb-7">
+                    <h1 className="w-full pt-2 text-center text-4xl font-bold">Back End</h1>
+                    <div className="pb-text-base pt-5 text-center xs:text-lg md:text-[24px]">
+                      Skilled in Node.js backends utilizing frameworks like NestJS and Next.js. Can
+                      fully utilize either relational or non-relational databases into a smooth
+                      working RESTful API.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     </>
