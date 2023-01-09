@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         .timeline({
           scrollTrigger: {
             trigger: '.skills',
-            start: 'top 20%',
+            start: 'top top',
             scrub: true,
             pin: true,
           },
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
-        <div ref={main} className="flex flex-col gap-48">
+        <div ref={main} className="flex flex-col">
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
@@ -75,9 +75,9 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="skills h-[100vh] w-full max-w-4xl">
+          <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
             <div className="text-center text-2xl text-white">I can do</div>
-            <div className="relative h-1/2 w-full">
+            <div className="relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
                   <div className="mb-3 flex flex-row gap-3">
