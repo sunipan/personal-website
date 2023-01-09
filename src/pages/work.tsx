@@ -5,8 +5,12 @@ import { Header } from '../components/header/Header';
 const Work: NextPage = () => {
   return (
     <>
-      <Layout className="min-h-screen bg-[#1a1a1a]">
-        <Header title="Work" commentStyle description="My past projects and career experiences" />
+      <Layout className="min-h-screen bg-dark">
+        <Header
+          title="Projects"
+          commentStyle
+          description="My past projects and career experiences"
+        />
       </Layout>
     </>
   );

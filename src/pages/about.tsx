@@ -5,7 +5,7 @@ import { Header } from '../components/header/Header';
 const Home: NextPage = () => {
   return (
     <>
-      <Layout className="min-h-screen bg-[#1a1a1a]">
+      <Layout className="min-h-screen bg-dark">
         <Header
           title="About"
           commentStyle

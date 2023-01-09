@@ -19,7 +19,7 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
             <div className="h-[60px] w-[6px] rounded-sm bg-gradient-to-t from-blue-500 to-red-500 xs:h-[70px] md:h-[100px] md:w-[12px] lg:h-[125px]"></div>
           </div>
           <div className="expand-section w-0 overflow-hidden whitespace-nowrap text-center text-white opacity-0">
-            <h1 className="text-[42px] leading-none xs:text-[58px] md:text-[70px] lg:text-[123px]">
+            <h1 className="py-5 px-3 text-[42px] leading-none xs:text-[58px] md:text-[70px] lg:text-[123px]">
               {title}
             </h1>
           </div>

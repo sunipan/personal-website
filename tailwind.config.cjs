@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        light: '#202020',
+        dark: '#1a1a1a',
       },
     },
     screens: {
@@ -14,7 +16,7 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1536px',
-    }
+    },
   },
   plugins: [],
 };
