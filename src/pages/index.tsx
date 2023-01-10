@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           trigger: project as gsap.DOMTarget,
           start: 'top top',
           end: i == 2 ? 'top top' : 'bottom 64px',
-          snap: 1,
+          // snap: 1,
           pin: true,
           pinSpacing: false,
         });
@@ -132,15 +132,32 @@ const Home: NextPage = () => {
           <div className="mb-20 pt-[100vh] text-center font-medium">
             <h3 className="text-3xl text-white">Featured Work</h3>
           </div>
+          <div className="project flex h-screen w-full items-center justify-center bg-red-500 text-3xl text-white">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <Image src="/assets/minga.png" width={195.2} height={51.2} alt="" />
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]"></div>
+            </div>
+          </div>
           <div className="project relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
-                <Image src="/assets/village.png" width={187} height={61} alt="" />
+                <Image src="/assets/village.png" width={100} height={100} alt="" />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h3 className="pt-2 text-center text-2xl font-medium text-white">
-                  The Village App
-                </h3>
+                <a
+                  href="https://thevillageapp.co"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white">The Village App</h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
                 <p className="text-center text-base">
                   An app designed to help people in the community connect with each other and find
                   resources.
