@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 import { useIsomorphicLayoutEffect } from '../lib/helpers/useIsomorphicLayoutEffect';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home: NextPage = () => {
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
         duration: 1,
         smoothOrigin: true,
       });
-      gsap.set('.skills', { transformStyle: 'preserve-3d', perspective: 1000 });
+      gsap.set('.card', { transformStyle: 'preserve-3d', perspective: 1000 });
       const q = gsap.utils.selector('.skills');
       const front = q('.front');
       const back = q('.back');
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
             scrub: true,
             pin: true,
           },
+          smoothChildTiming: true,
         })
         .to(front, { duration: 1, rotationX: 180 })
         .to(back, { duration: 1, rotationX: 0 }, 0)
@@ -77,7 +79,7 @@ const Home: NextPage = () => {
           </div>
           <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
             <div className="text-center text-2xl text-white">I can do</div>
-            <div className="relative h-full w-full">
+            <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
                   <div className="mb-3 flex flex-row gap-3">
