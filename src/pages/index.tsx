@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#123568] to-transparent"></div>
+            <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
           </div>
           <div className="project flex h-screen w-full items-center justify-center bg-red-500 text-3xl text-white">
             genoa
