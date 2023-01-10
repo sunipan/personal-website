@@ -1,3 +1,3 @@
 export const ProjectListItem = () => {
-  return <li></li>;
+  return <div className="project h-screen w-full"></div>;
 };

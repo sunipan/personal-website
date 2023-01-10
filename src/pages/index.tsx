@@ -6,6 +6,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 import { useIsomorphicLayoutEffect } from '../lib/helpers/useIsomorphicLayoutEffect';
+import { Terminal } from '../components/terminal/Terminal';
+import { ProjectListItem } from '../components/projectsList/ProjectListItem';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +16,7 @@ const Home: NextPage = () => {
   /* State */
   const main = useRef<HTMLDivElement>(null);
   useIsomorphicLayoutEffect(() => {
+    // For animating the first terminal
     const ctx = gsap.context(() => {
       gsap.from('.hello', {
         opacity: 0,
@@ -26,6 +30,7 @@ const Home: NextPage = () => {
       const back = q('.back');
       gsap.set(back, { rotationX: -180 });
 
+      // For flipping card
       gsap
         .timeline({
           scrollTrigger: {
@@ -40,6 +45,18 @@ const Home: NextPage = () => {
         .to(back, { duration: 1, rotationX: 0 }, 0)
         .to('.skills', { z: 50 }, 0)
         .to('.skills', { z: 0 }, 0.5);
+
+      // For pinning projects
+      gsap.utils.toArray('.project').forEach((project, i) => {
+        ScrollTrigger.create({
+          trigger: project as gsap.DOMTarget,
+          start: 'top top',
+          end: i == 2 ? 'top top' : 'bottom 64px',
+          snap: 1,
+          pin: true,
+          pinSpacing: false,
+        });
+      });
     }, main);
 
     return () => ctx.revert();
@@ -49,7 +66,7 @@ const Home: NextPage = () => {
     <>
       <Layout className="flex min-h-screen flex-col items-center justify-center bg-dark">
         <Header
-          title="Developer"
+          title="Full Stack Dev"
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
@@ -59,22 +76,16 @@ const Home: NextPage = () => {
               <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
                 Hi, I&apos;m Sebi Unipan 👋
               </h1>
-              <div className={`rounded-xl bg-light p-5 text-green-600`}>
-                <div className="mb-3 flex flex-row gap-3">
-                  <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
-                  <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
-                  <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
-                </div>
-                <div className="border-b-2 border-dark pt-2"></div>
-                <div>
-                  <div className="code-font pb-text-base pt-5 text-left xs:text-lg md:text-[24px]">
-                    <div>/*</div>I code for fun, trying the same things in different ways and
-                    different things the same way. Knowing how things tick is what I love the most.
-                    I&apos;m always looking for new challenges.
-                    <div>*/</div>
-                  </div>
-                </div>
-              </div>
+              <Terminal
+                className="rounded-xl bg-light p-5 text-green-600"
+                bodyClassName="code-font text-base pt-5 text-left xs:text-lg md:text-[24px]"
+                variant="dark"
+              >
+                <div>/*</div>I code for work, school, and for fun. I like to try the same things in
+                different ways and try different things in the same way. Knowing how things tick is
+                what I love the most and I&apos;m always looking for new challenges.
+                <div>*/</div>
+              </Terminal>
             </div>
           </div>
           <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
@@ -88,11 +99,12 @@ const Home: NextPage = () => {
                     <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
                   </div>
                   <div className="border-b-2 border-gray-200 pt-2"></div>
-                  <div className="flex h-full flex-col items-center justify-center pb-7">
+                  <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
                     <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
-                    <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
-                      I have years of experience building applications with React, HTML, and CSS. I
-                      can quickly build and design UIs that are meaningful, engaging, and optimized.
+                    <div className="pb-text-base max-w-lg pt-5 text-center font-medium xs:text-lg md:text-[24px]">
+                      With a Bachelor&apos;s Degree in Computer Science and 2 years of experience
+                      building various applications, I can quickly build and design UIs that are
+                      meaningful, engaging, and optimized.
                     </div>
                   </div>
                 </div>
@@ -101,21 +113,66 @@ const Home: NextPage = () => {
                 <div className="h-full rounded-xl bg-light p-5 text-white">
                   <div className="mb-3 flex flex-row gap-3">
                     <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="hver:opacity-70 h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70"></div>
                     <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
                   </div>
                   <div className="border-b-2 border-dark pt-2"></div>
-                  <div className="flex h-full flex-col items-center justify-center pb-7">
-                    <h1 className="w-full pt-2 text-center text-4xl font-bold">Back End</h1>
+                  <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
+                    <h1 className="w-full text-center text-4xl font-bold">Back End</h1>
                     <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
-                      Skilled in Node.js backends utilizing frameworks like NestJS and Next.js. Can
-                      fully utilize either relational or non-relational databases into a smooth
-                      RESTful API.
+                      Being skilled in Node.js backends, I can utilize both serverless or hosted
+                      backends paired with either relational or non-relation databases to build
+                      robust RESTful APIs.
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mb-20 pt-[100vh] text-center font-medium">
+            <h3 className="text-3xl text-white">Featured Work</h3>
+          </div>
+          <div className="project relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/village.png" width={187} height={61} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3 className="pt-2 text-center text-2xl font-medium text-white">
+                  The Village App
+                </h3>
+                <p className="text-center text-base">
+                  An app designed to help people in the community connect with each other and find
+                  resources.
+                </p>
+                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                    <li>
+                      Refactored the entire front end within 4 months to increase maintainability
+                      and user experience by up to 80%
+                    </li>
+                    <li>
+                      Corrected major bugs in the underlying structure of the application that
+                      hindered user interactivity
+                    </li>
+                    <li>
+                      Introduced better state management libraries to increase development time by
+                      50%
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#123568] to-transparent"></div>
+          </div>
+          <div className="project flex h-screen w-full items-center justify-center bg-red-500 text-3xl text-white">
+            genoa
+          </div>
+          <div className="project flex h-screen w-full items-center justify-center overflow-hidden bg-yellow-500 text-3xl text-white">
+            prosciutto
           </div>
         </div>
       </Layout>
