@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+import Image from 'next/image';
 import type { NextPage } from 'next';
 import { Layout } from '../components/layout';
 import { Header } from '../components/header/Header';
@@ -132,7 +133,163 @@ const Home: NextPage = () => {
           <div className="pt-[100vh] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          <ExperienceItem
+          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white">RentalHunt</h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <p className="px-2 text-center text-base">
+                  A revolutionary new rental app that has your back
+                </p>
+                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                    <li>
+                      Independently implemented the app&apos;s critical new point allocation system
+                      used by over 10,000 users daily.
+                    </li>
+                    <li>Converted several UIs to updated designs with improved practices</li>
+                    <li>
+                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                      member for the app
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
+          </div>
+          {/* <ExperienceItem
+            src="/assets/minga.png"
+            title="Minga"
+            width={130.8}
+            height={34.8}
+            href="https://minga.io/"
+            underlined
+            headerText="Areas I impacted:"
+            childWrapperClass="flex justify-center px-10"
+            gradientColour="#1c2f59"
+            role="Junior Software Engineer - Co-op"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>
+                Independently implemented the app&apos;s critical new point allocation system used
+                by over 10,000 users daily.
+              </li>
+              <li>Converted several UIs to updated designs with improved practices</li>
+              <li>
+                Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                member for the app
+              </li>
+            </ul>
+          </ExperienceItem> */}
+          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]">
+                <Image src="/assets/minga.png" width={130.8} height={34.8} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white">Minga</h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <p className="px-2 text-center text-base">
+                  A revolutionary new rental app that has your back
+                </p>
+                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                    <li>
+                      Independently implemented the app&apos;s critical new point allocation system
+                      used by over 10,000 users daily.
+                    </li>
+                    <li>Converted several UIs to updated designs with improved practices</li>
+                    <li>
+                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                      member for the app
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#1c2f59] to-transparent"></div>
+          </div>
+          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white">RentalHunt</h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <p className="px-2 text-center text-base">
+                  A revolutionary new rental app that has your back
+                </p>
+                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                    <li>
+                      Independently implemented the app&apos;s critical new point allocation system
+                      used by over 10,000 users daily.
+                    </li>
+                    <li>Converted several UIs to updated designs with improved practices</li>
+                    <li>
+                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                      member for the app
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
+          </div>
+          {/* <ExperienceItem
             src="/assets/rh-logo.png"
             title="RentalHunt"
             width={195}
@@ -179,7 +336,7 @@ const Home: NextPage = () => {
                 member for the app
               </li>
             </ul>
-          </ExperienceItem>
+          </ExperienceItem> */}
           {/* <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
