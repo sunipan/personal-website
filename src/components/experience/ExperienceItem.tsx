@@ -18,7 +18,7 @@ export const ExperienceItem = ({
   description,
 }: ExperienceProps) => {
   return (
-    <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+    <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
       <div className="z-50 flex flex-col items-center justify-center">
         <div
           className={`flex h-52 w-52 items-center justify-center rounded-full ${
