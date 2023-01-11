@@ -70,7 +70,11 @@ const Home: NextPage = () => {
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
+<<<<<<< HEAD
         <div ref={main} className="flex flex-col items-center">
+=======
+        <div ref={main} className="flex flex-col items-center justify-center">
+>>>>>>> e85fe60bd50ebeddbdd590223ad4a1fc089f332e
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
@@ -88,7 +92,11 @@ const Home: NextPage = () => {
               </Terminal>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
+=======
+          <div className="skills flex h-screen w-full max-w-4xl flex-col items-center justify-center pt-[140px] pb-20">
+>>>>>>> e85fe60bd50ebeddbdd590223ad4a1fc089f332e
             <div className="text-center text-2xl font-medium text-white md:text-3xl">I can do</div>
             <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
@@ -132,6 +140,7 @@ const Home: NextPage = () => {
           <div className="pt-[100vh] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
+<<<<<<< HEAD
           {/* <ProjectItem
             src="/assets/rh-logo.png"
             title="RentalHunt"
@@ -150,6 +159,8 @@ const Home: NextPage = () => {
             headerText="Building the web version of RentalHunt using Next.js and Tailwind to open up our reach to web users"
             gradientColour="#5258ec"
           />
+=======
+>>>>>>> e85fe60bd50ebeddbdd590223ad4a1fc089f332e
           <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
@@ -228,6 +239,18 @@ const Home: NextPage = () => {
             <ProjectItem />
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* <ProjectItem
+            src="/assets/rh-logo.png"
+            title="RentalHunt"
+            width={195}
+            height={43.2}
+            href="https://rentalhunt.ca/"
+            headerText="Building the web version of RentalHunt using Next.js and Tailwind to increase our reach to users"
+            gradientColour="#5258ec"
+          /> */}
+>>>>>>> e85fe60bd50ebeddbdd590223ad4a1fc089f332e
           {/* <div className="project relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
