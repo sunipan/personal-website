@@ -157,57 +157,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </ExperienceItem>
-          {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
-            <div className="z-50 flex flex-col items-center justify-center">
-              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
-                <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <a
-                  href="https://rentalhunt.ca/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
-                >
-                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
-                    RentalHunt
-                  </h3>
-                  <Image
-                    className="invert"
-                    src="/assets/icons/newtab.png"
-                    height={20}
-                    width={20}
-                    alt=""
-                  />
-                </a>
-                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
-                  Lead Web Developer
-                </div>
-                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
-                  A revolutionary new rental app that has your back
-                </p>
-                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
-                  Areas I impacted:
-                </h4>
-                <div className="flex justify-center px-10">
-                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
-                    <li>
-                      Develop the entire web version of RentalHunt using Next.js and hook it up to
-                      the existing backend
-                    </li>
-                    <li>
-                      Review pull requests of other members to make sure they follow best practices
-                    </li>
-                    <li>
-                      Help other team members get up to speed on the codebase and technologies used
-                      as well as onboard them
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
-          </div> */}
+
           <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
@@ -215,6 +165,7 @@ const Home: NextPage = () => {
             height={34.8}
             href="https://minga.io/"
             underlined
+            imageBg="bg-[#1c2f59]"
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1c2f59"
