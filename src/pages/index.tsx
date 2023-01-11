@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       gsap.utils.toArray('.experience').forEach((experience, i) => {
         ScrollTrigger.create({
           trigger: experience as gsap.DOMTarget,
-          start: 'top top',
+          start: 'top 64px',
           end: i == 3 ? 'top top' : 'bottom 64px',
           // snap: 1,
           pin: true,
