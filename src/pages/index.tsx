@@ -7,8 +7,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 import { useIsomorphicLayoutEffect } from '../lib/helpers/useIsomorphicLayoutEffect';
 import { Terminal } from '../components/terminal/Terminal';
-import { ProjectListItem } from '../components/projectsList/ProjectListItem';
-import Image from 'next/image';
+import { ExperienceItem } from '../components/experience/ExperienceItem';
+import { ProjectItem } from '../components/project/ProjectItem';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,11 +47,11 @@ const Home: NextPage = () => {
         .to('.skills', { z: 0 }, 0.5);
 
       // For pinning projects
-      gsap.utils.toArray('.project').forEach((project, i) => {
+      gsap.utils.toArray('.experience').forEach((experience, i) => {
         ScrollTrigger.create({
-          trigger: project as gsap.DOMTarget,
+          trigger: experience as gsap.DOMTarget,
           start: 'top top',
-          end: i == 2 ? 'top top' : 'bottom 64px',
+          end: i == 3 ? 'top top' : 'bottom 64px',
           // snap: 1,
           pin: true,
           pinSpacing: false,
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
-        <div ref={main} className="flex flex-col">
+        <div ref={main} className="flex flex-col items-center">
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
-            <div className="text-center text-2xl text-white">I can do</div>
+            <div className="text-center text-2xl font-medium text-white md:text-3xl">I can do</div>
             <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
@@ -129,27 +129,118 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="mb-20 pt-[100vh] text-center font-medium">
-            <h3 className="text-3xl text-white">Featured Work</h3>
+          <div className="pt-[100vh] text-center font-medium">
+            <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          <div className="project flex h-screen w-full items-center justify-center bg-red-500 text-3xl text-white">
-            <div className="z-50 flex flex-col items-center justify-center">
-              <Image src="/assets/minga.png" width={195.2} height={51.2} alt="" />
-              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]"></div>
-            </div>
+          {/* <ProjectItem
+            src="/assets/rh-logo.png"
+            title="RentalHunt"
+            width={195}
+            height={43.2}
+            href="https://rentalhunt.ca/"
+            headerText="Building the web version of RentalHunt using Next.js and Tailwind to increase our reach to users"
+            gradientColour="#5258ec"
+          /> */}
+          <ExperienceItem
+            src="/assets/rh-logo.png"
+            title="RentalHunt"
+            width={195}
+            height={43.2}
+            href="https://rentalhunt.ca/"
+            headerText="Building the web version of RentalHunt using Next.js and Tailwind to open up our reach to web users"
+            gradientColour="#5258ec"
+          />
+          <ExperienceItem
+            src="/assets/minga.png"
+            title="Minga"
+            width={130.8}
+            height={34.8}
+            imageBg="#1c2f59"
+            href="https://minga.io/"
+            underlined
+            headerText="Areas I impacted:"
+            childWrapperClass="flex justify-center px-10"
+            gradientColour="#1c2f59"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>
+                Independently implemented the app&apos;s critical new point allocation system used
+                by over 10,000 users daily.
+              </li>
+              <li>Converted several UIs to updated designs with improved practices</li>
+              <li>
+                Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                member for the app
+              </li>
+            </ul>
+          </ExperienceItem>
+          <ExperienceItem
+            src="/assets/village.png"
+            title="The Village App"
+            width={100}
+            height={100}
+            href="https://thevillageapp.co"
+            underlined
+            headerText="Areas I impacted:"
+            childWrapperClass="flex justify-center px-10"
+            gradientColour="#1cb0ac"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
+              <li>
+                Refactored the entire front end within 4 months to increase maintainability and user
+                experience by up to 80%.
+              </li>
+              <li>
+                Corrected major bugs in the underlying structure of the application and reviewed
+                multiple PRs by other team members.
+              </li>
+              <li>
+                Introduced better state management libraries to increase development time by 50%.
+              </li>
+            </ul>
+          </ExperienceItem>
+          <ExperienceItem
+            src="/assets/cpd.png"
+            title="Jusaves"
+            width={100}
+            height={100}
+            href="https://jusaves.com/"
+            underlined
+            headerText="Areas I impacted:"
+            childWrapperClass="flex justify-center px-10"
+            gradientColour="#f8935b"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
+              <li>
+                Constructed several features of the app front-to-back such as the login, sign up,
+                email verification
+              </li>
+              <li>
+                Engineered the app&apos;s entire AI recommendation system to increase user
+                engagement by 50%.
+              </li>
+              <li>Incorporated several of the ideas I had for the app into the production build</li>
+            </ul>
+          </ExperienceItem>
+          <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
+
+          <div className="flex w-full items-center justify-center">
+            <ProjectItem />
           </div>
-          <div className="project relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+
+          {/* <div className="project relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
-                <Image src="/assets/village.png" width={100} height={100} alt="" />
+                <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <a
-                  href="https://thevillageapp.co"
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
                 >
-                  <h3 className="text-center text-2xl font-medium text-white">The Village App</h3>
+                  <h3 className="text-center text-2xl font-medium text-white">RentalHunt</h3>
                   <Image
                     className="invert"
                     src="/assets/icons/newtab.png"
@@ -158,9 +249,8 @@ const Home: NextPage = () => {
                     alt=""
                   />
                 </a>
-                <p className="text-center text-base">
-                  An app designed to help people in the community connect with each other and find
-                  resources.
+                <p className="px-2 text-center text-base">
+                  A revolutionary new rental app that has your back
                 </p>
                 <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
                   Areas I impacted:
@@ -168,29 +258,20 @@ const Home: NextPage = () => {
                 <div className="flex justify-center px-10">
                   <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
                     <li>
-                      Refactored the entire front end within 4 months to increase maintainability
-                      and user experience by up to 80%
+                      Independently implemented the app&apos;s critical new point allocation system
+                      used by over 10,000 users daily.
                     </li>
+                    <li>Converted several UIs to updated designs with improved practices</li>
                     <li>
-                      Corrected major bugs in the underlying structure of the application that
-                      hindered user interactivity
-                    </li>
-                    <li>
-                      Introduced better state management libraries to increase development time by
-                      50%
+                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                      member for the app
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
-          </div>
-          <div className="project flex h-screen w-full items-center justify-center bg-red-500 text-3xl text-white">
-            genoa
-          </div>
-          <div className="project flex h-screen w-full items-center justify-center overflow-hidden bg-yellow-500 text-3xl text-white">
-            prosciutto
-          </div>
+            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
+          </div> */}
         </div>
       </Layout>
     </>
