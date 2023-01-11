@@ -161,6 +161,30 @@ const Home: NextPage = () => {
             title="Minga"
             width={130.8}
             height={34.8}
+            href="https://minga.io/"
+            underlined
+            headerText="Areas I impacted:"
+            childWrapperClass="flex justify-center px-10"
+            gradientColour="#1c2f59"
+            role="Junior Software Engineer - Co-op"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>
+                Independently implemented the app&apos;s critical new point allocation system used
+                by over 10,000 users daily.
+              </li>
+              <li>Converted several UIs to updated designs with improved practices</li>
+              <li>
+                Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                member for the app
+              </li>
+            </ul>
+          </ExperienceItem>
+          {/* <ExperienceItem
+            src="/assets/minga.png"
+            title="Minga"
+            width={130.8}
+            height={34.8}
             imageBg="#1c2f59"
             href="https://minga.io/"
             underlined
@@ -180,8 +204,8 @@ const Home: NextPage = () => {
                 member for the app
               </li>
             </ul>
-          </ExperienceItem>
-          <ExperienceItem
+          </ExperienceItem> */}
+          {/* <ExperienceItem
             role="Junior Software Engineer - Co-op"
             src="/assets/village.png"
             title="The Village App"
@@ -206,8 +230,8 @@ const Home: NextPage = () => {
                 Introduced better state management libraries to increase development time by 50%.
               </li>
             </ul>
-          </ExperienceItem>
-          <ExperienceItem
+          </ExperienceItem> */}
+          {/* <ExperienceItem
             src="/assets/cpd.png"
             title="Jusaves"
             width={100}
@@ -230,7 +254,7 @@ const Home: NextPage = () => {
               </li>
               <li>Incorporated several of the ideas I had for the app into the production build</li>
             </ul>
-          </ExperienceItem>
+          </ExperienceItem> */}
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
 
           <div className="flex w-full items-center justify-center">
