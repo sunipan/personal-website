@@ -133,7 +133,7 @@ const Home: NextPage = () => {
           <div className="pt-[100vh] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          <ExperienceItem
+          {/* <ExperienceItem
             src="/assets/rh-logo.png"
             title="RentalHunt"
             width={195}
@@ -156,15 +156,65 @@ const Home: NextPage = () => {
                 well as onboard them
               </li>
             </ul>
-          </ExperienceItem>
-          <ExperienceItem
+          </ExperienceItem> */}
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    RentalHunt
+                  </h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Lead Web Developer
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
+                  A revolutionary new rental app that has your back
+                </p>
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+                    <li>
+                      Develop the entire web version of RentalHunt using Next.js and hook it up to
+                      the existing backend
+                    </li>
+                    <li>
+                      Review pull requests of other members to make sure they follow best practices
+                    </li>
+                    <li>
+                      Help other team members get up to speed on the codebase and technologies used
+                      as well as onboard them
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
+          </div>
+          {/* <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
             width={130.8}
             height={34.8}
             href="https://minga.io/"
             underlined
-            imageBg="bg-[#1c2f59]"
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1c2f59"
@@ -181,8 +231,55 @@ const Home: NextPage = () => {
                 member for the app
               </li>
             </ul>
-          </ExperienceItem>
-          <ExperienceItem
+          </ExperienceItem> */}
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]">
+                <Image src="/assets/minga.png" width={130.8} height={34.8} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://rentalhunt.ca/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">Minga</h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Junior Software Engineer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
+                  A revolutionary new rental app that has your back
+                </p>
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+                    <li>
+                      Independently implemented the app&apos;s critical new point allocation system
+                      used by over 10,000 users daily.
+                    </li>
+                    <li>Converted several UIs to updated designs with improved practices</li>
+                    <li>
+                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
+                      member for the app
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1c2f59] to-transparent"></div>
+          </div>
+          {/* <ExperienceItem
             role="Junior Software Engineer - Co-op"
             src="/assets/village.png"
             title="The Village App"
@@ -207,8 +304,61 @@ const Home: NextPage = () => {
                 Introduced better state management libraries to increase development time by 50%.
               </li>
             </ul>
-          </ExperienceItem>
-          <ExperienceItem
+          </ExperienceItem> */}
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/village.png" width={100} height={100} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://thevillageapp.co"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    The Village App
+                  </h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Junior Software Developer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
+                  A mobile app designed to bring communities together and help users find resources
+                  for support
+                </p>
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
+                    <li>
+                      Refactored the entire front end within 4 months to increase maintainability
+                      and user experience by up to 80%.
+                    </li>
+                    <li>
+                      Corrected major bugs in the underlying structure of the application and
+                      reviewed multiple PRs by other team members.
+                    </li>
+                    <li>
+                      Introduced better state management libraries to increase development time by
+                      50%.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
+          </div>
+          {/* <ExperienceItem
             src="/assets/cpd.png"
             title="Jusaves"
             width={100}
@@ -231,8 +381,61 @@ const Home: NextPage = () => {
               </li>
               <li>Incorporated several of the ideas I had for the app into the production build</li>
             </ul>
-          </ExperienceItem>
+          </ExperienceItem> */}
+          <div className="experience relative flex h-[120] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+            <div className="z-50 flex flex-col items-center justify-center">
+              <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
+                <Image src="/assets/cpd.png" width={100} height={100} alt="" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href="https://jusaves.com"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
+                >
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    Jusaves
+                  </h3>
+                  <Image
+                    className="invert"
+                    src="/assets/icons/newtab.png"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />
+                </a>
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Software Engineer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
+                  A unique approach to the coupon sale market that allows customers to get their
+                  discounts and cashback instantly
+                </p>
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                  Areas I impacted:
+                </h4>
+                <div className="flex justify-center px-10">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
+                    <li>
+                      Constructed several features of the app front-to-back such as the login, sign
+                      up, email verification
+                    </li>
+                    <li>
+                      Engineered the app&apos;s entire AI recommendation system to increase user
+                      engagement by 50%.
+                    </li>
+                    <li>
+                      Incorporated several of the ideas I had for the app into the production build
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#f8935b] to-transparent"></div>
+          </div>
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
+
           <div className="flex w-full items-center justify-center">
             <ProjectItem />
           </div>
