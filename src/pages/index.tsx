@@ -142,13 +142,14 @@ const Home: NextPage = () => {
             underlined
             gradientColour="#5258ec"
             role="Lead Web Developer"
+            childWrapperClass="flex justify-center px-10"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
               <li>
                 Develop the entire web version of RentalHunt using Next.js and hook it up to the
                 existing backend
               </li>
-              <li>Discussing styles of pages and their intended functionality with other leads</li>
+              <li>Review pull requests of other members to make sure they follow best practices</li>
               <li>
                 Help other team members get up to speed on the codebase and technologies used as
                 well as onboard them
