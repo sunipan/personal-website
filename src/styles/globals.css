@@ -11,6 +11,12 @@
   }
 }
 
+@layer {
+  .rental-hunt-glow {
+    background-image: linear-gradient(trasnparent, #5258ec);
+  }
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;

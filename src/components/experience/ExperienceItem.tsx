@@ -60,7 +60,7 @@ export const ExperienceItem = ({
         </div>
       </div>
       <div
-        className={`absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[${gradientColour}] to-transparent`}
+        className={`bg-gradient-to-t absolute inset-x-0 bottom-0 h-2/3 w-full from-[${gradientColour}] to-transparent`}
       ></div>
     </div>
   );
