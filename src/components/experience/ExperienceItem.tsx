@@ -22,7 +22,7 @@ export const ExperienceItem = ({
       <div className="z-50 flex flex-col items-center justify-center">
         <div
           className={`flex h-52 w-52 items-center justify-center rounded-full ${
-            imageBg ? `bg-[${imageBg}]` : 'bg-white'
+            imageBg || 'bg-white'
           }`}
         >
           <Image src={src} width={width} height={height} alt="" />
