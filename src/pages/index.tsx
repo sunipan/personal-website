@@ -133,7 +133,7 @@ const Home: NextPage = () => {
           <div className="pt-[100vh] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          {/* <ExperienceItem
+          <ExperienceItem
             src="/assets/rh-logo.png"
             title="RentalHunt"
             width={195}
@@ -156,8 +156,8 @@ const Home: NextPage = () => {
                 well as onboard them
               </li>
             </ul>
-          </ExperienceItem> */}
-          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+          </ExperienceItem>
+          {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
                 <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
@@ -207,8 +207,8 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
-          </div>
-          {/* <ExperienceItem
+          </div> */}
+          <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
             width={130.8}
@@ -231,8 +231,8 @@ const Home: NextPage = () => {
                 member for the app
               </li>
             </ul>
-          </ExperienceItem> */}
-          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+          </ExperienceItem>
+          {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]">
                 <Image src="/assets/minga.png" width={130.8} height={34.8} alt="" />
@@ -278,8 +278,8 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1c2f59] to-transparent"></div>
-          </div>
-          {/* <ExperienceItem
+          </div> */}
+          <ExperienceItem
             role="Junior Software Engineer - Co-op"
             src="/assets/village.png"
             title="The Village App"
@@ -304,8 +304,8 @@ const Home: NextPage = () => {
                 Introduced better state management libraries to increase development time by 50%.
               </li>
             </ul>
-          </ExperienceItem> */}
-          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+          </ExperienceItem>
+          {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
                 <Image src="/assets/village.png" width={100} height={100} alt="" />
@@ -357,8 +357,8 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
-          </div>
-          {/* <ExperienceItem
+          </div> */}
+          <ExperienceItem
             src="/assets/cpd.png"
             title="Jusaves"
             width={100}
@@ -381,8 +381,8 @@ const Home: NextPage = () => {
               </li>
               <li>Incorporated several of the ideas I had for the app into the production build</li>
             </ul>
-          </ExperienceItem> */}
-          <div className="experience relative flex h-[120] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+          </ExperienceItem>
+          {/* <div className="experience relative flex h-[120] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
                 <Image src="/assets/cpd.png" width={100} height={100} alt="" />
@@ -433,7 +433,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#f8935b] to-transparent"></div>
-          </div>
+          </div> */}
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
 
           <div className="flex w-full items-center justify-center">
