@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       gsap.utils.toArray('.experience').forEach((experience, i) => {
         ScrollTrigger.create({
           trigger: experience as gsap.DOMTarget,
-          start: 'top 64px',
+          start: 'top top',
           end: i == 3 ? 'top top' : 'bottom 64px',
           // snap: 1,
           pin: true,
@@ -169,7 +169,9 @@ const Home: NextPage = () => {
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
                 >
-                  <h3 className="text-center text-2xl font-medium text-white">RentalHunt</h3>
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    RentalHunt
+                  </h3>
                   <Image
                     className="invert"
                     src="/assets/icons/newtab.png"
@@ -178,10 +180,13 @@ const Home: NextPage = () => {
                     alt=""
                   />
                 </a>
-                <p className="px-2 text-center text-base">
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Lead Web Developer
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A revolutionary new rental app that has your back
                 </p>
-                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
@@ -199,7 +204,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#5258ec] to-transparent"></div>
           </div>
           {/* <ExperienceItem
             src="/assets/minga.png"
@@ -237,7 +242,7 @@ const Home: NextPage = () => {
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
                 >
-                  <h3 className="text-center text-2xl font-medium text-white">Minga</h3>
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">Minga</h3>
                   <Image
                     className="invert"
                     src="/assets/icons/newtab.png"
@@ -246,10 +251,13 @@ const Home: NextPage = () => {
                     alt=""
                   />
                 </a>
-                <p className="px-2 text-center text-base">
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Junior Software Engineer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A revolutionary new rental app that has your back
                 </p>
-                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
@@ -267,7 +275,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#1c2f59] to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1c2f59] to-transparent"></div>
           </div>
           {/* <ExperienceItem
             role="Junior Software Engineer - Co-op"
@@ -307,7 +315,9 @@ const Home: NextPage = () => {
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
                 >
-                  <h3 className="text-center text-2xl font-medium text-white">The Village App</h3>
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    The Village App
+                  </h3>
                   <Image
                     className="invert"
                     src="/assets/icons/newtab.png"
@@ -316,11 +326,14 @@ const Home: NextPage = () => {
                     alt=""
                   />
                 </a>
-                <p className="px-2 text-center text-base">
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Junior Software Developer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A mobile app designed to bring communities together and help users find resources
                   for support
                 </p>
-                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
@@ -338,7 +351,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
           </div>
           {/* <ExperienceItem
             src="/assets/cpd.png"
@@ -376,7 +389,9 @@ const Home: NextPage = () => {
                   target="_blank"
                   className="flex flex-row items-center justify-center gap-3 pt-3 hover:opacity-70"
                 >
-                  <h3 className="text-center text-2xl font-medium text-white">Jusaves</h3>
+                  <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+                    Jusaves
+                  </h3>
                   <Image
                     className="invert"
                     src="/assets/icons/newtab.png"
@@ -385,11 +400,14 @@ const Home: NextPage = () => {
                     alt=""
                   />
                 </a>
-                <p className="px-2 text-center text-base">
+                <div className="w-full py-3 text-center text-base italic opacity-70 sm:text-lg">
+                  Software Engineer - Co-op
+                </div>
+                <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A unique approach to the coupon sale market that allows customers to get their
                   discounts and cashback instantly
                 </p>
-                <h4 className="mt-5 text-lg font-medium underline underline-offset-8">
+                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
@@ -407,7 +425,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-[#f8935b] to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#f8935b] to-transparent"></div>
           </div>
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
 
