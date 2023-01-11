@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           commentStyle
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
-        <div ref={main} className="flex flex-col items-center">
+        <div ref={main} className="flex w-full flex-col items-center">
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
@@ -132,24 +132,29 @@ const Home: NextPage = () => {
           <div className="pt-[100vh] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          {/* <ProjectItem
-            src="/assets/rh-logo.png"
-            title="RentalHunt"
-            width={195}
-            height={43.2}
-            href="https://rentalhunt.ca/"
-            headerText="Building the web version of RentalHunt using Next.js and Tailwind to increase our reach to users"
-            gradientColour="#5258ec"
-          /> */}
           <ExperienceItem
             src="/assets/rh-logo.png"
             title="RentalHunt"
             width={195}
             height={43.2}
             href="https://rentalhunt.ca/"
-            headerText="Building the web version of RentalHunt using Next.js and Tailwind to open up our reach to web users"
+            headerText="Responsibilities:"
+            underlined
             gradientColour="#5258ec"
-          />
+            role="Lead Web Developer"
+          >
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>
+                Develop the entire web version of RentalHunt using Next.js and hook it up to the
+                existing backend
+              </li>
+              <li>Discussing styles of pages and their intended functionality with other leads</li>
+              <li>
+                Help other team members get up to speed on the codebase and technologies used as
+                well as onboard them
+              </li>
+            </ul>
+          </ExperienceItem>
           <ExperienceItem
             src="/assets/minga.png"
             title="Minga"
@@ -161,6 +166,7 @@ const Home: NextPage = () => {
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1c2f59"
+            role="Junior Software Developer - Co-op"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
               <li>
@@ -175,6 +181,7 @@ const Home: NextPage = () => {
             </ul>
           </ExperienceItem>
           <ExperienceItem
+            role="Junior Software Engineer - Co-op"
             src="/assets/village.png"
             title="The Village App"
             width={100}
@@ -209,6 +216,7 @@ const Home: NextPage = () => {
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#f8935b"
+            role="Software Engineer - Co-op"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
               <li>

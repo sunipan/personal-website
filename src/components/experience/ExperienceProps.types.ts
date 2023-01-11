@@ -13,4 +13,6 @@ export type ExperienceProps = {
   headerText: string;
   underlined?: boolean;
   project?: boolean;
+  role: string;
+  description?: string;
 };
