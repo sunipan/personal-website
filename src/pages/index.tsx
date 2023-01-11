@@ -157,7 +157,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </ExperienceItem> */}
-          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
                 <Image src="/assets/rh-logo.png" width={195} height={43.2} alt="" />
@@ -186,19 +186,21 @@ const Home: NextPage = () => {
                 <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A revolutionary new rental app that has your back
                 </p>
-                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
-                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
                     <li>
-                      Independently implemented the app&apos;s critical new point allocation system
-                      used by over 10,000 users daily.
+                      Develop the entire web version of RentalHunt using Next.js and hook it up to
+                      the existing backend
                     </li>
-                    <li>Converted several UIs to updated designs with improved practices</li>
                     <li>
-                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
-                      member for the app
+                      Review pull requests of other members to make sure they follow best practices
+                    </li>
+                    <li>
+                      Help other team members get up to speed on the codebase and technologies used
+                      as well as onboard them
                     </li>
                   </ul>
                 </div>
@@ -230,7 +232,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </ExperienceItem> */}
-          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-[#1c2f59]">
                 <Image src="/assets/minga.png" width={130.8} height={34.8} alt="" />
@@ -257,11 +259,11 @@ const Home: NextPage = () => {
                 <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
                   A revolutionary new rental app that has your back
                 </p>
-                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
-                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
                     <li>
                       Independently implemented the app&apos;s critical new point allocation system
                       used by over 10,000 users daily.
@@ -303,7 +305,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </ExperienceItem> */}
-          <div className="experience relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white">
+          <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
             <div className="z-50 flex flex-col items-center justify-center">
               <div className="flex h-52 w-52 items-center justify-center rounded-full bg-white">
                 <Image src="/assets/village.png" width={100} height={100} alt="" />
@@ -333,19 +335,22 @@ const Home: NextPage = () => {
                   A mobile app designed to bring communities together and help users find resources
                   for support
                 </p>
-                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
-                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
                     <li>
-                      Independently implemented the app&apos;s critical new point allocation system
-                      used by over 10,000 users daily.
+                      Refactored the entire front end within 4 months to increase maintainability
+                      and user experience by up to 80%.
                     </li>
-                    <li>Converted several UIs to updated designs with improved practices</li>
                     <li>
-                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
-                      member for the app
+                      Corrected major bugs in the underlying structure of the application and
+                      reviewed multiple PRs by other team members.
+                    </li>
+                    <li>
+                      Introduced better state management libraries to increase development time by
+                      50%.
                     </li>
                   </ul>
                 </div>
@@ -407,19 +412,21 @@ const Home: NextPage = () => {
                   A unique approach to the coupon sale market that allows customers to get their
                   discounts and cashback instantly
                 </p>
-                <h4 className="max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
+                <h4 className="mt-5 max-w-2xl text-center text-lg font-medium underline underline-offset-8 sm:text-xl md:text-2xl">
                   Areas I impacted:
                 </h4>
                 <div className="flex justify-center px-10">
-                  <ul className="flex list-disc flex-col gap-5 pt-2 text-base">
+                  <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
                     <li>
-                      Independently implemented the app&apos;s critical new point allocation system
-                      used by over 10,000 users daily.
+                      Constructed several features of the app front-to-back such as the login, sign
+                      up, email verification
                     </li>
-                    <li>Converted several UIs to updated designs with improved practices</li>
                     <li>
-                      Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
-                      member for the app
+                      Engineered the app&apos;s entire AI recommendation system to increase user
+                      engagement by 50%.
+                    </li>
+                    <li>
+                      Incorporated several of the ideas I had for the app into the production build
                     </li>
                   </ul>
                 </div>
