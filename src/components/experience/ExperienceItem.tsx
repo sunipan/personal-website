@@ -47,8 +47,6 @@ export const ExperienceItem = ({
             {role}
           </div>
           <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
-            {/* A revolutionary new rental platform that benefits both landlords and tenants while also
-            resolving issues with the current rental market. */}
             {description}
           </p>
           <h4
