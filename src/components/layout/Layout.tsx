@@ -1,5 +1,4 @@
 import { LayoutProps } from './Layout.types';
-import { Footer } from '../Footer/Footer';
 import Head from 'next/head';
 import { NavBar } from '../nav/NavBar';
 
@@ -13,10 +12,9 @@ export const Layout = ({ children, className, title }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={className}>
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
       </main>
-      <Footer />
     </>
   );
 };

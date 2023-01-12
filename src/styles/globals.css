@@ -101,6 +101,22 @@
   -ms-backface-visibility: hidden;
 }
 
+.bounce {
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideUp {
   0% {
     transform: translateY(0);

@@ -51,11 +51,6 @@ export const NavBar = () => {
           </button>
         </div>
         <div className="code-font hidden flex-row justify-around gap-10 text-lg lg:flex">
-          <Link href="/work">
-            <a>
-              <div className="hover-underline-animation hover:text-yellow-200">Work</div>
-            </a>
-          </Link>
           <Link href="/about">
             <a>
               <div className="hover-underline-animation hover:text-yellow-200">About</div>

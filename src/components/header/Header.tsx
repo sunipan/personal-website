@@ -41,6 +41,40 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
           <h5 className="w-full text-white">{description}</h5>
         )}
       </div>
+      <div className="flex flex-row items-center justify-center gap-5">
+        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full bg-blue-500 p-2 hover:opacity-70">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/sebi-unipan/"
+            className="h-full w-full"
+          >
+            <Image
+              className="invert"
+              src="/assets/linkedin.svg"
+              width={80}
+              height={80}
+              alt="linkedin"
+            />
+          </a>
+        </div>
+        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full hover:opacity-70">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/sunipan"
+            className="h-full w-full"
+          >
+            <Image
+              className="invert"
+              src="/assets/github.svg"
+              width={80}
+              height={80}
+              alt="linkedin"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

@@ -74,9 +74,15 @@ const Home: NextPage = () => {
         <div ref={main} className="flex w-full flex-col items-center">
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
-              <h1 className="x:text-[28px] mb-5 text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
+              <h1 className="x:text-[28px] text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
                 Hi, I&apos;m Sebi Unipan 👋
               </h1>
+              <h4 className="mb-5 flex flex-row items-center justify-start text-lg italic text-white">
+                <div className="flex h-full items-center">
+                  <Image src="/assets/pin.png" height={20} width={20} alt="" />
+                </div>
+                <div className="opacity-70">Vancouver, British Columbia</div>
+              </h4>
               <Terminal
                 className="rounded-xl bg-light p-5 text-green-600"
                 bodyClassName="code-font text-base pt-5 text-left xs:text-lg md:text-[24px]"
@@ -90,7 +96,9 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
-            <div className="text-center text-2xl font-medium text-white md:text-3xl">I can do</div>
+            <div className="z-10 text-center text-2xl font-medium text-white md:text-3xl">
+              I can do
+            </div>
             <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
@@ -467,6 +475,23 @@ const Home: NextPage = () => {
               width={72}
               height={72}
             />
+          </div>
+          <div className="pt-20 text-center font-medium">
+            <h3 className="text-4xl font-bold text-white">Want More?</h3>
+          </div>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
+            href="https://drive.google.com/file/d/1UsgRAYWTpJGxDzK_YGXtnpnxNdBt4Un9/view?usp=sharing"
+          >
+            Here&apos;s my resume
+          </a>
+          <div className="mt-16 text-3xl font-bold text-white">Reach out to me!</div>
+          <div className="mb-72 max-w-sm text-center text-lg text-white">
+            My inbox is{' '}
+            <span className="text-lg font-medium underline underline-offset-8">always</span> open
+            whether you have a question or just want to say hi 😎
           </div>
         </div>
       </Layout>
