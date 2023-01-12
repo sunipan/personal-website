@@ -439,8 +439,33 @@ const Home: NextPage = () => {
 
           <div className="flex w-full flex-col items-center justify-center gap-5">
             <ProjectItem
+              image="/assets/pharmapal.svg"
+              link="https://cosc-499-winner.vercel.app/"
+              stack={['React', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js']}
               glowClass="pharma-glow"
               description="An intuitive web app for assisting users with picking the right over-the-counter medicine for their exact symptoms"
+              width={195}
+              height={43.2}
+            />
+            <ProjectItem
+              image="/assets/chatbot.png"
+              link="https://github.com/sunipan/Chat-Bot"
+              stack={['Python', 'SciKitLearn', 'NLTK']}
+              glowClass="chat-glow"
+              description="A psychiatrist chat bot designed to give users support through natural responses"
+              repo
+              width={72}
+              height={72}
+            />
+            <ProjectItem
+              image="/assets/gpu.png"
+              link="https://github.com/sunipan/GPU-Bot"
+              stack={['Python', 'BeautifulSoup']}
+              glowClass="gpu-glow"
+              description="A bot that automatically checks for GPU availability on the Best Buy website"
+              repo
+              width={72}
+              height={72}
             />
           </div>
         </div>

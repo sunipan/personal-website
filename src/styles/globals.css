@@ -15,6 +15,14 @@
   background-image: radial-gradient(#45c486, transparent, transparent);
 }
 
+.chat-glow {
+  background-image: radial-gradient(#f7b500, transparent, transparent);
+}
+
+.gpu-glow {
+  background-image: radial-gradient(#ff02fb, transparent, transparent);
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;

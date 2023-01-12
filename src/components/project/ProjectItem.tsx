@@ -5,9 +5,21 @@ import { StackList } from '../stackList/StackList';
 export const ProjectItem = ({
   glowClass,
   description,
+  stack,
+  link,
+  image,
+  repo = false,
+  width,
+  height,
 }: {
   glowClass: string;
   description: string;
+  stack: string[];
+  link: string;
+  image: string;
+  repo?: boolean;
+  width: number;
+  height: number;
 }) => {
   /* State */
   const [isHover, setIsHover] = useState(false);
@@ -41,16 +53,16 @@ export const ProjectItem = ({
       onMouseLeave={handleLeave}
     >
       <div className="relative flex h-full w-full items-center justify-between px-2 py-10 text-white xs:px-5 sm:px-10">
-        <div className="h-[43.2px]">
-          <Image src="/assets/pharmapal.svg" width={195} height={43.2} alt="" />
+        <div className="h-[72px]">
+          <Image src={image} width={width} height={height} alt="" />
         </div>
         <a
-          href="https://cosc-499-winner.vercel.app/"
+          href={link}
           rel="noreferrer"
           target="_blank"
           className="rounded-3xl bg-neutral-600 p-3 hover:opacity-70"
         >
-          View Demo
+          {repo ? 'View Repo' : 'View Demo'}
         </a>
         <div className="absolute inset-x-0 bottom-5 right-0 flex h-5 w-full justify-center">
           <svg
@@ -72,12 +84,12 @@ export const ProjectItem = ({
         }`}
       >
         <div
-          className={`${glowClass} absolute z-10 h-[600px] w-full max-w-4xl sm:-bottom-96 sm:h-[768px]`}
+          className={`${glowClass} absolute -bottom-[150px] z-10 h-[300px] w-full max-w-4xl xs:-bottom-[300px] xs:h-[600px]`}
         ></div>
-        <div className="z-50 mt-20 max-w-2xl px-10 text-center text-xl text-white md:text-xl">
+        <div className="z-50 max-w-2xl px-10 text-center text-xl text-white sm:mt-20 md:text-xl">
           {description}
         </div>
-        <StackList list={['React', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js']} />
+        <StackList list={stack} />
       </div>
     </div>
   );
