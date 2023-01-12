@@ -11,10 +11,8 @@
   }
 }
 
-@layer {
-  .rental-hunt-glow {
-    background-image: linear-gradient(trasnparent, #5258ec);
-  }
+.pharma-glow {
+  background-image: radial-gradient(#45c486, transparent, transparent);
 }
 
 .hover-underline-animation {

@@ -215,6 +215,7 @@ const Home: NextPage = () => {
             height={34.8}
             href="https://minga.io/"
             underlined
+            imageBg="bg-[#1c2f59]"
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1c2f59"
@@ -436,8 +437,11 @@ const Home: NextPage = () => {
           </div> */}
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
 
-          <div className="flex w-full items-center justify-center">
-            <ProjectItem />
+          <div className="flex w-full flex-col items-center justify-center gap-5">
+            <ProjectItem
+              glowClass="pharma-glow"
+              description="An intuitive web app for assisting users with picking the right over-the-counter medicine for their exact symptoms"
+            />
           </div>
         </div>
       </Layout>

@@ -2,7 +2,13 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { StackList } from '../stackList/StackList';
 
-export const ProjectItem = () => {
+export const ProjectItem = ({
+  glowClass,
+  description,
+}: {
+  glowClass: string;
+  description: string;
+}) => {
   /* State */
   const [isHover, setIsHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -62,13 +68,14 @@ export const ProjectItem = () => {
       <div
         ref={dropdownRef}
         className={`relative flex w-full flex-col items-center justify-around overflow-hidden transition-all duration-500 ${
-          isOpen ? 'h-96' : 'h-0'
-        } bg-gradient-to-t from-[#45C486] to-transparent`}
+          isOpen ? 'h-72' : 'h-0'
+        }`}
       >
-        <div className="absolute -bottom-[400px] z-10 h-[800px] w-screen max-w-4xl bg-gradient-radial from-[#45C486] via-transparent to-transparent"></div>
+        <div
+          className={`${glowClass} absolute z-10 h-[600px] w-full max-w-4xl sm:-bottom-96 sm:h-[768px]`}
+        ></div>
         <div className="z-50 mt-20 max-w-2xl px-10 text-center text-xl text-white md:text-xl">
-          An intuitive web app for assisting users with picking the right over-the-counter medicine
-          for their exact symptoms
+          {description}
         </div>
         <StackList list={['React', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js']} />
       </div>
