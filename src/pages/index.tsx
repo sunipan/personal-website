@@ -228,15 +228,15 @@ const Home: NextPage = () => {
             role="Junior Software Engineer - Co-op"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>Debugged several issues with the app that hindered user engagement</li>
               <li>
-                Independently implemented the app&apos;s critical new point allocation system used
-                by over 10,000 users daily.
+                Engineered a new critical feature that is being used by over 20,000 users daily
               </li>
-              <li>Converted several UIs to updated designs with improved practices</li>
               <li>
-                Learned Angular 9 and the gRPC protocol quickly in order to be a valuable team
-                member for the app
+                Thoroughly advanced my OOP knowledge through Angular and TypeScript and learned how
+                to use the gRPC protocol
               </li>
+              <li>Contributed to sprint planning weekly and practiced agile methodologies</li>
             </ul>
           </ExperienceItem>
           {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
@@ -299,16 +299,19 @@ const Home: NextPage = () => {
             gradientColour="#1cb0ac"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
+              <li>Successfully enhanced back end of the app to speed up queries by up to 80%</li>
               <li>
-                Refactored the entire front end within 4 months to increase maintainability and user
-                experience by up to 80%.
+                Resolved login issues impactic a significant number of users from being able to
+                switch accounts
               </li>
               <li>
-                Corrected major bugs in the underlying structure of the application and reviewed
-                multiple PRs by other team members.
+                Refactored and redesigned 90% of the front end with a new UI and implemented
+                ReactQuery as the new state management solution replacing Redux, improving
+                development time by 40% and app simplicity drastically
               </li>
               <li>
-                Introduced better state management libraries to increase development time by 50%.
+                Guided and on-boarded other junior developers when they needed help with their
+                tickets
               </li>
             </ul>
           </ExperienceItem>
@@ -379,14 +382,14 @@ const Home: NextPage = () => {
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
               <li>
-                Constructed several features of the app front-to-back such as the login, sign up,
-                email verification
+                Programmed full stack functionality of the app from the landing page, login, and
+                testing strategy with the Laravel framework
               </li>
               <li>
-                Engineered the app&apos;s entire AI recommendation system to increase user
-                engagement by 50%.
+                Constructed the machine learning recommendation system to offer users a more
+                personalized experience on the items page with Python
               </li>
-              <li>Incorporated several of the ideas I had for the app into the production build</li>
+              <li>Assisted another development team in creating the apps' Chrome extension</li>
             </ul>
           </ExperienceItem>
           {/* <div className="experience relative flex h-[120] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
@@ -481,7 +484,7 @@ const Home: NextPage = () => {
             rel="noreferrer"
             target="_blank"
             className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
-            href="https://drive.google.com/file/d/1UsgRAYWTpJGxDzK_YGXtnpnxNdBt4Un9/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ghyKYRIJXqOaw6PArJbJqc_foub6yy-7/view?usp=sharing"
           >
             Here&apos;s my resume
           </a>
