@@ -389,7 +389,7 @@ const Home: NextPage = () => {
                 Constructed the machine learning recommendation system to offer users a more
                 personalized experience on the items page with Python
               </li>
-              <li>Assisted another development team in creating the apps' Chrome extension</li>
+              <li>Assisted another development team in creating the apps&apos; Chrome extension</li>
             </ul>
           </ExperienceItem>
           {/* <div className="experience relative flex h-[120] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
