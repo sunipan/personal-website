@@ -1,6 +1,6 @@
 import { LayoutProps } from './Layout.types';
 import Head from 'next/head';
-import { NavBar } from '../nav/NavBar';
+// import { NavBar } from '../nav/NavBar';
 
 export const Layout = ({ children, className, title }: LayoutProps) => {
   return (
