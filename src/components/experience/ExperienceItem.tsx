@@ -19,7 +19,7 @@ export const ExperienceItem = ({
 }: ExperienceProps) => {
   return (
     <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
-      <div className="z-50 flex flex-col items-center justify-center pb-36 xs:pb-0">
+      <div className="z-50 flex flex-col items-center justify-center">
         <div
           className={`flex h-52 w-52 items-center justify-center rounded-full ${
             imageBg || 'bg-white'
