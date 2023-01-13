@@ -19,7 +19,7 @@ export const ExperienceItem = ({
 }: ExperienceProps) => {
   return (
     <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
-      <div className="z-50 flex flex-col items-center justify-center">
+      <div className="z-50 flex flex-col items-center justify-center pb-36 xs:pb-0">
         <div
           className={`flex h-52 w-52 items-center justify-center rounded-full ${
             imageBg || 'bg-white'
@@ -60,7 +60,7 @@ export const ExperienceItem = ({
         </div>
       </div>
       <div
-        className={`bg-gradient-to-t absolute inset-x-0 bottom-0 h-2/3 w-full from-[${gradientColour}] to-transparent`}
+        className={`absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[${gradientColour}] to-transparent`}
       ></div>
     </div>
   );

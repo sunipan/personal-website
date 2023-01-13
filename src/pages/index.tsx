@@ -154,15 +154,13 @@ const Home: NextPage = () => {
             childWrapperClass="flex justify-center px-10"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
+              <li>Developed the front end of our application with React and Next.js</li>
+              <li>Wrote unit and integration tests using Jest with 90% app coverge</li>
               <li>
-                Develop the entire web version of RentalHunt using Next.js and hook it up to the
-                existing backend
+                Enforced code quality standards by developing Continuous Integration and Continuous
+                Delivery automation pipelines with GitHub Actions and Docker
               </li>
-              <li>Review pull requests of other members to make sure they follow best practices</li>
-              <li>
-                Help other team members get up to speed on the codebase and technologies used as
-                well as onboard them
-              </li>
+              <li>Deployed production on Vercel</li>
             </ul>
           </ExperienceItem>
           {/* <div className="experience relative flex h-[120vh] w-full items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
