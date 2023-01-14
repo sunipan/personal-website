@@ -152,6 +152,7 @@ const Home: NextPage = () => {
             gradientColour="#5258ec"
             role="Lead Web Developer"
             childWrapperClass="flex justify-center px-10"
+            date="September 2022 - Present"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
               <li>
@@ -228,6 +229,7 @@ const Home: NextPage = () => {
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1c2f59"
             role="Junior Software Engineer - Co-op"
+            date="May - August 2022"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
               <li>
@@ -299,6 +301,7 @@ const Home: NextPage = () => {
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
             gradientColour="#1cb0ac"
+            date="September 2021 - April 2022"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
               <li>
@@ -378,6 +381,7 @@ const Home: NextPage = () => {
             childWrapperClass="flex justify-center px-10"
             gradientColour="#f8935b"
             role="Software Engineer - Co-op"
+            date="May - August 2021"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
               <li>

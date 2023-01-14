@@ -15,4 +15,5 @@ export type ExperienceProps = {
   project?: boolean;
   role: string;
   description?: string;
+  date: string;
 };

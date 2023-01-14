@@ -42,7 +42,7 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
         )}
       </div>
       <div className="comment-slide flex flex-row items-center justify-center gap-5 opacity-0">
-        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full bg-blue-500 p-2 hover:opacity-70">
+        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full bg-blue-500 p-2 transition-all duration-200 hover:opacity-70">
           <a
             rel="noreferrer"
             target="_blank"
@@ -58,7 +58,7 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
             />
           </a>
         </div>
-        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full hover:opacity-70">
+        <div className="h-10 w-10 cursor-pointer overflow-hidden rounded-full transition-all duration-200 hover:opacity-70">
           <a
             rel="noreferrer"
             target="_blank"
