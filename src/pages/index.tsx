@@ -302,19 +302,18 @@ const Home: NextPage = () => {
             date="September 2021 - April 2022"
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base md:text-lg">
-              <li>Successfully enhanced back end of the app to speed up queries by up to 80%</li>
+              <li>Enhanced the back end of the app to speed up queries by up to 80%</li>
               <li>
-                Resolved login issues impactic a significant number of users from being able to
+                Resolved login issues impacting a significant number of users from being able to
                 switch accounts
               </li>
               <li>
-                Refactored and redesigned 90% of the front end with a new UI and implemented
-                ReactQuery as the new state management solution replacing Redux, improving
-                development time by 40% and app simplicity drastically
+                Refactored the entire front end with a new UI and migrated the app from Redux to
+                React Query, reducing development time by 50% and simplifying the app drastically
               </li>
               <li>
-                Guided and on-boarded other junior developers when they needed help with their
-                tickets
+                Guided Jr. developers with their tickets and on-boarded multiple new members of the
+                team
               </li>
             </ul>
           </ExperienceItem>
