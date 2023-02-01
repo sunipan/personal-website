@@ -451,13 +451,13 @@ const Home: NextPage = () => {
 
           <div className="flex w-full flex-col items-center justify-center gap-5">
             <ProjectItem
-              image="/assets/pharmapal.svg"
+              image="/assets/pharmapal.png"
               link="https://cosc-499-winner.vercel.app/"
               stack={['React', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js']}
               glowClass="pharma-glow"
               description="An intuitive web app for assisting users with picking the right over-the-counter medicine for their exact symptoms"
-              width={195}
-              height={43.2}
+              width={192.5}
+              height={50.4}
             />
             <ProjectItem
               image="/assets/chatbot.png"
@@ -487,7 +487,7 @@ const Home: NextPage = () => {
             rel="noreferrer"
             target="_blank"
             className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
-            href="https://drive.google.com/file/d/17CEnuADYATkt9rhqC50hjN2qQaz1a6HF/view?usp=sharing"
+            href="https://drive.google.com/file/d/1nT4S25IgPUoEEc-BqMCNCC_q-qzD1033/view?usp=sharing"
           >
             Here&apos;s my resume
           </a>
