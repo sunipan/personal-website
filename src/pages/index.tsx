@@ -487,7 +487,11 @@ const Home: NextPage = () => {
             rel="noreferrer"
             target="_blank"
             className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
+<<<<<<< HEAD
             href="https://drive.google.com/file/d/1nT4S25IgPUoEEc-BqMCNCC_q-qzD1033/view?usp=sharing"
+=======
+            href="https://drive.google.com/file/d/1KYEqmUSmxIe9yC7xqle5zvsi7tpl5ksc/view?usp=sharing"
+>>>>>>> 08fe346f89cc08eec5c7acabaf82aa9b35c5207a
           >
             Here&apos;s my resume
           </a>
