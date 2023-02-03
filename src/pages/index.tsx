@@ -89,10 +89,10 @@ const Home: NextPage = () => {
               >
                 <div>/*</div>As a highly motivated and versatile programmer, I bring a unique
                 combination of technical expertise and creative problem-solving skills to every
-                project I take on. Whether I'm coding for work, school, or just for fun, I approach
-                every challenge with a passion for learning and a drive to constantly improve. I
-                find fulfillment in exploring new and innovative ways to tackle problems and I take
-                pride in getting to the heart of how things work.
+                project I take on. Whether I&apos;m coding for work, school, or just for fun, I
+                approach every challenge with a passion for learning and a drive to constantly
+                improve. I find fulfillment in exploring new and innovative ways to tackle problems
+                and I take pride in getting to the heart of how things work.
                 <div>*/</div>
               </Terminal>
             </div>
