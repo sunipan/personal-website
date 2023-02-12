@@ -36,7 +36,7 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
       </div>
       <div className="comment-slide my-5 flex w-60 justify-center text-center opacity-0 xs:w-full xs:max-w-sm xs:text-[22px] md:max-w-lg md:text-2xl lg:max-w-2xl">
         {commentStyle ? (
-          <h5 className="w-full text-green-600">{`/* ${description} */`}</h5>
+          <h5 className="w-full text-green-500">{`/* ${description} */`}</h5>
         ) : (
           <h5 className="w-full text-white">{description}</h5>
         )}

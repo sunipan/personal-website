@@ -53,7 +53,6 @@ const Home: NextPage = () => {
           trigger: experience as gsap.DOMTarget,
           start: 'top top',
           end: i == 3 ? 'top top' : 'bottom 64px',
-          // snap: 1,
           pin: true,
           pinSpacing: false,
         });
@@ -75,7 +74,7 @@ const Home: NextPage = () => {
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
-                Hi, I&apos;m Sebi Unipan 👋
+                Hi, I&apos;m Sebi Unipan <span className="wave">👋</span>
               </h1>
               <h4 className="mb-5 flex flex-row items-center justify-start text-lg italic text-white">
                 <div className="flex h-full items-center">
@@ -84,13 +83,16 @@ const Home: NextPage = () => {
                 <div className="opacity-70">Vancouver, British Columbia</div>
               </h4>
               <Terminal
-                className="rounded-xl bg-light p-5 text-green-600"
+                className="rounded-xl bg-light p-5 text-green-500"
                 bodyClassName="code-font text-base pt-5 text-left xs:text-lg md:text-[24px]"
                 variant="dark"
               >
-                <div>/*</div>I code for work, school, and for fun. I like to try the same things in
-                different ways and try different things in the same way. Knowing how things tick is
-                what I love the most and I&apos;m always looking for new challenges.
+                <div>/*</div>As a highly motivated and versatile programmer, I bring a unique
+                combination of technical expertise and creative problem-solving skills to every
+                project I take on. Whether I&apos;m coding for work, school, or just for fun, I
+                approach every challenge with a passion for learning and a drive to constantly
+                improve. I find fulfillment in exploring new and innovative ways to tackle problems
+                and I take pride in getting to the heart of how things work.
                 <div>*/</div>
               </Terminal>
             </div>
