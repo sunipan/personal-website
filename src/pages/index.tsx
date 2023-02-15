@@ -292,11 +292,11 @@ const Home: NextPage = () => {
           </div> */}
           <ExperienceItem
             role="Junior Software Engineer - Co-op"
-            src="/assets/village.png"
-            title="The Village App"
-            width={100}
-            height={100}
-            href="https://thevillageapp.co"
+            src="/assets/atomic47.png"
+            title="Atomic47 Labs"
+            width={201.5}
+            height={66.66}
+            href="https://atomic47.co/"
             underlined
             headerText="Areas I impacted:"
             childWrapperClass="flex justify-center px-10"
@@ -489,7 +489,7 @@ const Home: NextPage = () => {
             rel="noreferrer"
             target="_blank"
             className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
-            href="https://drive.google.com/file/d/1X-a7pPq4lOTeCbSqlnzsEe5nW9y20WLR/view?usp=sharing"
+            href="https://drive.google.com/file/d/1cIlxushRyaxjlHRX44iygjYhLw0wgoKr/view?usp=sharing"
           >
             Here&apos;s my resume
           </a>
