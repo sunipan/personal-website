@@ -489,7 +489,7 @@ const Home: NextPage = () => {
             rel="noreferrer"
             target="_blank"
             className="mt-5 rounded-3xl bg-neutral-600 px-5 py-2 text-center text-2xl text-white hover:opacity-70"
-            href="https://drive.google.com/file/d/1cIlxushRyaxjlHRX44iygjYhLw0wgoKr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1nTZagbAW03hffhUk7OHT6-Jg5UeWkD_5/view?usp=sharing"
           >
             Here&apos;s my resume
           </a>
