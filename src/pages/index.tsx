@@ -113,9 +113,9 @@ const Home: NextPage = () => {
                   <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
                     <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
                     <div className="pb-text-base max-w-lg pt-5 text-center font-medium xs:text-lg md:text-[24px]">
-                      With a Bachelor&apos;s Degree in Computer Science and 2 years of experience
-                      building various applications, I can quickly build and design UIs that are
-                      meaningful, engaging, and optimized.
+                      With a Bachelor&apos;s Degree in Computer Science and over 2 years of
+                      professional experience building various applications, I can quickly build and
+                      design UIs that are meaningful, engaging, and optimized.
                     </div>
                   </div>
                 </div>
