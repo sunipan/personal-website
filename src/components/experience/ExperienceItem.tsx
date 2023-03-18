@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ExperienceProps } from './ExperienceProps.types';
+import { ExperienceProps } from './ExperienceItem.types';
 
 export const ExperienceItem = ({
   width,
