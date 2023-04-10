@@ -460,7 +460,7 @@ const Home: NextPage = () => {
           <div className="flex w-full flex-col items-center justify-center gap-5">
             <ProjectItem
               image="/assets/pharmapal.png"
-              link="https://cosc-499-winner.vercel.app/"
+              link="https://pharmapal.vercel.app/"
               stack={['React', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js']}
               glowClass="pharma-glow"
               description="An intuitive web app for assisting users with picking the right over-the-counter medicine for their exact symptoms"
