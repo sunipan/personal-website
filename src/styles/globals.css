@@ -24,7 +24,7 @@
 }
 
 .upright {
-  transform: scaleX(-1) !important;
+  transform: scale(-1, 1) !important;
 }
 
 .hover-underline-animation {
