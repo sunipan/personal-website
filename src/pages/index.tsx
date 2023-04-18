@@ -10,6 +10,7 @@ import { useIsomorphicLayoutEffect } from '../lib/helpers/useIsomorphicLayoutEff
 import { Terminal } from '../components/terminal/Terminal';
 import { ExperienceItem } from '../components/experience/ExperienceItem';
 import { ProjectItem } from '../components/project/ProjectItem';
+import { useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         y: 40,
         duration: 1,
         smoothOrigin: true,
+        delay: 1.5,
       });
       gsap.set('.card', { transformStyle: 'preserve-3d', perspective: 1000 });
       const q = gsap.utils.selector('.skills');
@@ -71,6 +73,17 @@ const Home: NextPage = () => {
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
         <div ref={main} className="flex w-full flex-col items-center">
+          <div className="hello mb-10 flex h-80 w-80 justify-center">
+            <Image
+              src="/assets/selfie.jpg"
+              className="h-80 w-80 rotate-90 -scale-y-[1] rounded-full"
+              objectFit="cover"
+              height={3088}
+              width={2316}
+              priority
+              alt="Sebi Unipan"
+            />
+          </div>
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
               <h1 className="x:text-[28px] text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
@@ -105,8 +118,8 @@ const Home: NextPage = () => {
               <div className="backface-hidden front absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-white p-5">
                   <div className="mb-3 flex flex-row gap-3">
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70"></div>
                     <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
                   </div>
                   <div className="border-b-2 border-gray-200 pt-2"></div>
@@ -125,7 +138,7 @@ const Home: NextPage = () => {
               <div className="backface-hidden back absolute inset-0 m-7">
                 <div className="h-full rounded-xl bg-light p-5 text-white">
                   <div className="mb-3 flex flex-row gap-3">
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70 hover:opacity-70"></div>
+                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear  hover:opacity-70"></div>
                     <div className="hver:opacity-70 h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70"></div>
                     <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
                   </div>
@@ -456,7 +469,6 @@ const Home: NextPage = () => {
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#f8935b] to-transparent"></div>
           </div> */}
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
-
           <div className="flex w-full flex-col items-center justify-center gap-5">
             <ProjectItem
               image="/assets/pharmapal.png"
