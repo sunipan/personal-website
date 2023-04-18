@@ -73,10 +73,10 @@ const Home: NextPage = () => {
           description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
         />
         <div ref={main} className="flex w-full flex-col items-center">
-          <div className="mb-10 flex h-80 w-80 scale-x-[-1] scale-y-[1] transform justify-center">
+          <div className="hello mb-10 flex h-80 w-80 justify-center">
             <Image
               src="/assets/selfie.jpg"
-              className="rounded-full"
+              className="flip-horiz rounded-full"
               objectFit="cover"
               height={3088}
               width={2316}
