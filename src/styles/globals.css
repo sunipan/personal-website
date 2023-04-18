@@ -23,10 +23,6 @@
   background-image: radial-gradient(#ff02fb, transparent, transparent);
 }
 
-.upright {
-  transform: scale(-1, 1) !important;
-}
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
