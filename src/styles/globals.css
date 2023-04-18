@@ -24,7 +24,6 @@
 }
 
 .upright {
-  rotate: 90deg;
   transform: scaleX(-1);
 }
 
