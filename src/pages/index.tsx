@@ -76,7 +76,7 @@ const Home: NextPage = () => {
           <div className="hello mb-10 flex h-80 w-80 justify-center">
             <Image
               src="/assets/selfie.jpg"
-              className="flip-horiz rounded-full"
+              className="rounded-full"
               objectFit="cover"
               height={3088}
               width={2316}
