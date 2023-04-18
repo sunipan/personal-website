@@ -76,7 +76,7 @@ const Home: NextPage = () => {
           <div className="hello mb-10 flex h-80 w-80 justify-center">
             <Image
               src="/assets/selfie.jpg"
-              className="h-80 w-80 rotate-90 -scale-y-[1] rounded-full"
+              className="h-80 w-80 rotate-90 scale-y-[-1] scale-x-[-1] rounded-full"
               objectFit="cover"
               height={3088}
               width={2316}
