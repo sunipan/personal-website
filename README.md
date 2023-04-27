@@ -1,4 +1,4 @@
-# My person website
+# My personal website
 
 I built this website using Next.js, React, and Tailwind and then deployed it on Vercel.
 
