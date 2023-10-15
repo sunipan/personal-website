@@ -126,11 +126,11 @@ const Home: NextPage = () => {
                   <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
                     <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
                     <div className="pb-text-base max-w-lg pt-5 text-center font-medium xs:text-lg md:text-[24px]">
-                      As an individual with a Bachelor&apos;s Degree in Computer Science and over 2
+                      As an individual with a Bachelor&apos;s Degree in Computer Science and over 3
                       years of professional experience in developing a diverse range of
                       applications, I possess the ability to swiftly construct and design user
                       interfaces that are both purposeful and captivating, while also being
-                      optimized for optimal performance.
+                      optimized for performance.
                     </div>
                   </div>
                 </div>
@@ -146,13 +146,12 @@ const Home: NextPage = () => {
                   <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
                     <h1 className="w-full text-center text-4xl font-bold">Back End</h1>
                     <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
-                      As a seasoned professional proficient in Node.js backends, I possess the
-                      ability to adeptly leverage serverless or hosted backends in tandem with
-                      either relational or non-relational databases, to effectively construct and
-                      deliver robust RESTful APIs. In addition, I am well-versed in optimizing
-                      testing and deployment pipelines for applications through the utilization of
-                      Docker and GitHub Actions. Moreover, I possess hands-on experience working
-                      with both SQL and NoSQL databases.
+                      As a seasoned developer proficient in Node.js backends, I possess the ability
+                      to adeptly leverage serverless or hosted backends in tandem with either
+                      relational or non-relational databases, to effectively construct and deliver
+                      robust RESTful APIs. In addition, I am well-versed in optimizing testing and
+                      deployment pipelines for applications through the utilization of Docker and
+                      GitHub Actions.
                     </div>
                   </div>
                 </div>
