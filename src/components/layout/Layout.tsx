@@ -1,6 +1,5 @@
-import { LayoutProps } from './Layout.types';
 import Head from 'next/head';
-// import { NavBar } from '../nav/NavBar';
+import { LayoutProps } from './Layout.types';
 
 export const Layout = ({ children, className, title }: LayoutProps) => {
   return (
@@ -11,10 +10,7 @@ export const Layout = ({ children, className, title }: LayoutProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={className}>
-        {/* <NavBar /> */}
-        {children}
-      </main>
+      <main className={className}>{children}</main>
     </>
   );
 };
