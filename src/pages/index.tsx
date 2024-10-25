@@ -5,13 +5,95 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { ExperienceItem } from '../components/experience/ExperienceItem';
+import { CompanyKey, ExperienceProps } from '../components/experience/ExperienceItem.types';
 import { Header } from '../components/header/Header';
 import { Layout } from '../components/layout';
 import { ProjectItem } from '../components/project/ProjectItem';
 import { Terminal } from '../components/terminal/Terminal';
 import { useIsomorphicLayoutEffect } from '../lib/useIsomorphicLayoutEffect';
+import { getUniqueId } from '../lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const companyInfo: ExperienceProps[] = [
+  {
+    companyKey: CompanyKey.Rave,
+    width: 5834,
+    height: 3001,
+    src: '/assets/rave.png',
+    bulletPoints: [
+      'Documented, implemented, and tested several new UI features that are used by millions of users daily',
+      "Interacted with Rave's community to understand their needs and requirements",
+      'Refactored legacy systems of the app to improve performance and maintainability',
+    ],
+    companyName: 'Rave',
+    href: 'https://rave.io/',
+    jobTitle: 'Software Engineer',
+    date: 'May 2023 - Present',
+  },
+  {
+    companyKey: CompanyKey.RentalHunt,
+    width: 195,
+    height: 43.2,
+    src: '/assets/rh-logo.png',
+    bulletPoints: [
+      'Handled development, testing, and deployment for the front end of our application with React and Next.js',
+      'Enforced code quality standards by developing Continuous Integration and Continuous Delivery automation pipelines with GitHub Actions and Docker',
+    ],
+    companyName: 'RentalHunt',
+    href: 'https://rentalhunt.ca/',
+    jobTitle: 'Lead Web Developer',
+    date: 'September 2022 - October 2023',
+  },
+  {
+    companyKey: CompanyKey.Minga,
+    width: 130.8,
+    height: 34.8,
+    src: '/assets/minga.png',
+    bulletPoints: [
+      'Debugged several issues with the app that hindered user engagement',
+      'Engineered a new critical feature that is being used by over 20,000 users daily',
+      'Thoroughly advanced my OOP knowledge through Angular and TypeScript and learned how to use the gRPC protocol',
+      'Contributed to sprint planning weekly and practiced agile methodologies',
+    ],
+    companyName: 'Minga',
+    href: 'https://minga.io/',
+    jobTitle: 'Junior Software Engineer - Co-op',
+    date: 'May - August 2022',
+  },
+  {
+    companyKey: CompanyKey.Atomic47,
+    width: 201.5,
+    height: 66.66,
+    src: '/assets/atomic47.png',
+    bulletPoints: [
+      'Enhanced the back end of the app to speed up queries by up to 80%',
+      'Resolved login issues impacting a significant number of users from being able to switch accounts',
+      'Refactored entire front end with a new UI and migrated the app from Redux to React Query, reducing development time by 50%',
+      'Guided Jr. developers with their tickets and on-boarded multiple new members of the team',
+    ],
+    companyName: 'Atomic47 Labs',
+    href: 'https://atomic47.co/',
+    jobTitle: 'Junior Software Engineer - Co-op',
+    date: 'September 2021 - April 2022',
+  },
+  {
+    id: 'jusaves',
+    companyKey: CompanyKey.Jusaves,
+    width: 100,
+    height: 100,
+    src: '/assets/cpd.png',
+    bulletPoints: [
+      'Programmed full stack functionality of the app from the landing page, login, and testing strategy with the Laravel framework',
+      'Constructed the machine learning recommendation system to offer users a more personalized experience on the items page with Python',
+      "Assisted another development team in creating the apps' Chrome extension",
+    ],
+    companyName: 'Jusaves',
+    href: 'https://jusaves.com/',
+    jobTitle: 'Software Engineer - Co-op',
+    date: 'May - August 2021',
+  },
+];
 
 const Home: NextPage = () => {
   /* State */
@@ -64,7 +146,7 @@ const Home: NextPage = () => {
         ScrollTrigger.create({
           trigger: experience as gsap.DOMTarget,
           start: 'top top',
-          end: i == 3 ? 'top top' : 'bottom top',
+          end: i === companyInfo.length - 1 ? 'top top' : 'bottom top',
           pin: true,
           pinSpacing: false,
         });
@@ -128,105 +210,21 @@ const Home: NextPage = () => {
           <div className="experience-header z-50 pt-[550px] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
-          <ExperienceItem
-            src="/assets/rh-logo.png"
-            title="RentalHunt"
-            width={195}
-            height={43.2}
-            href="https://rentalhunt.ca/"
-            underlined
-            gradientColour="#5258ec"
-            role="Lead Web Developer"
-            childWrapperClass="flex justify-center px-10"
-            date="September 2022 - Present"
-          >
-            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm sm:text-lg">
-              <li>Developed the front end of our application with React and Next.js</li>
-              <li>
-                Enforced code quality standards by developing Continuous Integration and Continuous
-                Delivery automation pipelines with GitHub Actions and Docker
-              </li>
-              <li>Deployed production on Vercel</li>
-            </ul>
-          </ExperienceItem>
-          <ExperienceItem
-            src="/assets/minga.png"
-            title="Minga"
-            width={130.8}
-            height={34.8}
-            href="https://minga.io/"
-            underlined
-            imageBg="bg-[#1c2f59]"
-            childWrapperClass="flex justify-center px-10"
-            gradientColour="#1c2f59"
-            role="Junior Software Engineer - Co-op"
-            date="May - August 2022"
-          >
-            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm sm:text-lg">
-              <li>Debugged several issues with the app that hindered user engagement</li>
-              <li>
-                Engineered a new critical feature that is being used by over 20,000 users daily
-              </li>
-              <li>
-                Thoroughly advanced my OOP knowledge through Angular and TypeScript and learned how
-                to use the gRPC protocol
-              </li>
-              <li>Contributed to sprint planning weekly and practiced agile methodologies</li>
-            </ul>
-          </ExperienceItem>
-          <ExperienceItem
-            role="Junior Software Engineer - Co-op"
-            src="/assets/atomic47.png"
-            title="Atomic47 Labs"
-            width={201.5}
-            height={66.66}
-            href="https://atomic47.co/"
-            underlined
-            childWrapperClass="flex justify-center px-10"
-            gradientColour="#1cb0ac"
-            date="September 2021 - April 2022"
-          >
-            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm md:text-lg">
-              <li>Enhanced the back end of the app to speed up queries by up to 80%</li>
-              <li>
-                Resolved login issues impacting a significant number of users from being able to
-                switch accounts
-              </li>
-              <li>
-                Refactored entire front end with a new UI and migrated the app from Redux to React
-                Query, reducing development time by 50%
-              </li>
-              <li>
-                Guided Jr. developers with their tickets and on-boarded multiple new members of the
-                team
-              </li>
-            </ul>
-          </ExperienceItem>
-          <ExperienceItem
-            id="jusaves"
-            src="/assets/cpd.png"
-            title="Jusaves"
-            width={100}
-            height={100}
-            href="https://jusaves.com/"
-            underlined
-            childWrapperClass="flex justify-center px-10"
-            gradientColour="#f8935b"
-            role="Software Engineer - Co-op"
-            date="May - August 2021"
-          >
-            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm sm:text-lg">
-              <li>
-                Programmed full stack functionality of the app from the landing page, login, and
-                testing strategy with the Laravel framework
-              </li>
-              <li>
-                Constructed the machine learning recommendation system to offer users a more
-                personalized experience on the items page with Python
-              </li>
-              <li>Assisted another development team in creating the apps&apos; Chrome extension</li>
-            </ul>
-          </ExperienceItem>
+          {companyInfo.map((company: ExperienceProps) => (
+            <ExperienceItem
+              key={getUniqueId()}
+              id={company.id}
+              src={company.src}
+              companyName={company.companyName}
+              companyKey={company.companyKey}
+              width={company.width}
+              height={company.height}
+              href={company.href}
+              jobTitle={company.jobTitle}
+              date={company.date}
+              bulletPoints={company.bulletPoints}
+            />
+          ))}
           <h3 className="my-20 text-center text-4xl font-bold text-white">Projects</h3>
           <div className="flex w-full flex-col items-center justify-center gap-5">
             <ProjectItem

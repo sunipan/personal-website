@@ -1,21 +1,32 @@
 import Image from 'next/image';
-import { cn } from '../../lib/utils';
+import { getUniqueId } from '../../lib/utils';
 import { ExperienceProps } from './ExperienceItem.types';
+
+const gradientColors = {
+  rave: 'from-[#f9f9f9]',
+  rentalhunt: 'from-[#5258ec]',
+  minga: 'from-[#1c2f59]',
+  atomic47: 'from-[#1cb0ac]',
+  jusaves: 'from-[#f8935b]',
+};
+
+const bgColors = {
+  rave: 'bg-white',
+  rentalhunt: 'bg-white',
+  minga: 'bg-[#1c2f59]',
+  atomic47: 'bg-white',
+  jusaves: 'bg-white',
+};
 
 export const ExperienceItem = ({
   width,
   height,
   src,
-  gradientColour,
-  imageBg,
-  children,
-  title,
+  bulletPoints,
+  jobTitle: title,
+  companyKey,
   href,
-  childWrapperClass,
-  underlined,
-  project,
-  role,
-  description,
+  jobTitle: role,
   date,
   id,
 }: ExperienceProps) => {
@@ -27,9 +38,7 @@ export const ExperienceItem = ({
       <div className="mb-5 w-full py-3 text-center text-xl opacity-70 sm:text-lg">{date}</div>
       <div className="z-50 flex flex-col items-center justify-center xs:pb-0">
         <div
-          className={`flex h-52 w-52 items-center justify-center rounded-full ${
-            imageBg || 'bg-white'
-          }`}
+          className={`flex h-52 w-52 items-center justify-center overflow-hidden rounded-full ${bgColors[companyKey]}`}
         >
           <Image src={src} width={width} height={height} alt="" />
         </div>
@@ -52,17 +61,17 @@ export const ExperienceItem = ({
           <div className="w-full py-3 text-center text-base font-medium italic opacity-70 sm:text-lg">
             {role}
           </div>
-          <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
-            {description}
-          </p>
-          <div className={childWrapperClass}>{children}</div>
+          <div className="flex justify-center px-10">
+            <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm sm:text-lg">
+              {bulletPoints.map((bulletPoint) => (
+                <li key={getUniqueId()}>{bulletPoint}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <div
-        className={cn(
-          'absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t to-transparent',
-          `from-[${gradientColour}]`,
-        )}
+        className={`absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t ${gradientColors[companyKey]} to-transparent`}
       ></div>
     </div>
   );
