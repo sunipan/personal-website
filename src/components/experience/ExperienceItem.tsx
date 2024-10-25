@@ -23,10 +23,10 @@ export const ExperienceItem = ({
   height,
   src,
   bulletPoints,
-  jobTitle: title,
+  companyName,
   companyKey,
   href,
-  jobTitle: role,
+  jobTitle,
   date,
   id,
 }: ExperienceProps) => {
@@ -49,7 +49,9 @@ export const ExperienceItem = ({
             target="_blank"
             className="flex flex-row items-center justify-center gap-3 pt-3 transition-all duration-200 hover:opacity-70"
           >
-            <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">{title}</h3>
+            <h3 className="text-center text-2xl font-medium text-white sm:text-3xl">
+              {companyName}
+            </h3>
             <Image
               className="invert"
               src="/assets/icons/newtab.png"
@@ -59,7 +61,7 @@ export const ExperienceItem = ({
             />
           </a>
           <div className="w-full py-3 text-center text-base font-medium italic opacity-70 sm:text-lg">
-            {role}
+            {jobTitle}
           </div>
           <div className="flex justify-center px-10">
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-sm sm:text-lg">
