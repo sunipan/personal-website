@@ -107,7 +107,7 @@ const Home: NextPage = () => {
               </h4>
             </div>
           </div>
-          <div className="skills h-[500x] w-full max-w-4xl">
+          <div className="skills h-[500px] w-full max-w-4xl">
             <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
                 <Terminal
