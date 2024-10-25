@@ -11,7 +11,6 @@ export type ExperienceProps = {
   children?: ReactNode;
   href: string;
   childWrapperClass?: string;
-  headerText: string;
   underlined?: boolean;
   project?: boolean;
   role: string;

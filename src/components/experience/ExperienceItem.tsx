@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { cn } from '../../lib/utils';
 import { ExperienceProps } from './ExperienceItem.types';
 
 export const ExperienceItem = ({
@@ -12,7 +13,6 @@ export const ExperienceItem = ({
   href,
   childWrapperClass,
   underlined,
-  headerText,
   project,
   role,
   description,
@@ -25,7 +25,7 @@ export const ExperienceItem = ({
       className="experience relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen"
     >
       <div className="mb-5 w-full py-3 text-center text-xl opacity-70 sm:text-lg">{date}</div>
-      <div className="z-50 flex flex-col items-center justify-center pb-36 xs:pb-0">
+      <div className="z-50 flex flex-col items-center justify-center xs:pb-0">
         <div
           className={`flex h-52 w-52 items-center justify-center rounded-full ${
             imageBg || 'bg-white'
@@ -55,18 +55,14 @@ export const ExperienceItem = ({
           <p className="max-w-2xl px-5 text-center text-base sm:text-lg md:text-xl">
             {description}
           </p>
-          <h4
-            className={`max-w-2xl text-center text-lg font-medium sm:text-xl md:text-2xl ${
-              underlined && 'underline underline-offset-8'
-            } ${project && 'mt-20'}`}
-          >
-            {headerText}
-          </h4>
           <div className={childWrapperClass}>{children}</div>
         </div>
       </div>
       <div
-        className={`absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[${gradientColour}] to-transparent`}
+        className={cn(
+          'absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t to-transparent',
+          `from-[${gradientColour}]`,
+        )}
       ></div>
     </div>
   );
