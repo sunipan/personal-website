@@ -1,6 +1,5 @@
 export type TerminalProps = {
-  className: string;
-  children: React.ReactNode;
-  bodyClassName: string;
+  headerText: string;
+  bodyText: string;
   variant: 'light' | 'dark';
 };

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 export type ExperienceProps = {
+  id?: string;
   title: string;
   src: string;
   width: number;

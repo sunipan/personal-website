@@ -17,9 +17,13 @@ export const ExperienceItem = ({
   role,
   description,
   date,
+  id,
 }: ExperienceProps) => {
   return (
-    <div className="experience relative flex h-[120vh] w-full flex-col items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen">
+    <div
+      id={id}
+      className="experience relative flex h-[100vh] w-full flex-col items-center justify-center overflow-hidden bg-dark text-3xl text-white xs:h-screen"
+    >
       <div className="mb-5 w-full py-3 text-center text-xl opacity-70 sm:text-lg">{date}</div>
       <div className="z-50 flex flex-col items-center justify-center pb-36 xs:pb-0">
         <div

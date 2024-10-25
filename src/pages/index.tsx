@@ -1,16 +1,15 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import Image from 'next/image';
-import type { NextPage } from 'next';
-import { Layout } from '../components/layout';
-import { Header } from '../components/header/Header';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import type { NextPage } from 'next';
+import Image from 'next/image';
 import { useRef } from 'react';
-import { useIsomorphicLayoutEffect } from '../lib/helpers/useIsomorphicLayoutEffect';
-import { Terminal } from '../components/terminal/Terminal';
 import { ExperienceItem } from '../components/experience/ExperienceItem';
+import { Header } from '../components/header/Header';
+import { Layout } from '../components/layout';
 import { ProjectItem } from '../components/project/ProjectItem';
-import { useState } from 'react';
+import { Terminal } from '../components/terminal/Terminal';
+import { useIsomorphicLayoutEffect } from '../lib/useIsomorphicLayoutEffect';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +37,8 @@ const Home: NextPage = () => {
         .timeline({
           scrollTrigger: {
             trigger: '.skills',
-            start: 'top top',
+            start: 'top 30%',
+            end: 'bottom 30%',
             scrub: true,
             pin: true,
           },
@@ -48,6 +48,16 @@ const Home: NextPage = () => {
         .to(back, { duration: 1, rotationX: 0 }, 0)
         .to('.skills', { z: 50 }, 0)
         .to('.skills', { z: 0 }, 0.5);
+
+      // Pin Experience header
+      ScrollTrigger.create({
+        trigger: '.experience-header',
+        start: 'bottom 15%',
+        endTrigger: '#jusaves',
+        end: 'bottom 100%',
+        pin: true,
+        pinSpacing: false,
+      });
 
       // For pinning projects
       gsap.utils.toArray('.experience').forEach((experience, i) => {
@@ -70,7 +80,7 @@ const Home: NextPage = () => {
         <Header
           title="Full Stack Dev"
           commentStyle
-          description="I'm a creative, passionate, and curious Full Stack developer who loves to learn new things"
+          description="Inventive, driven, and endlessly curious"
         />
         <div ref={main} className="flex w-full flex-col items-center">
           <div className="hello mb-10 flex h-80 w-80 justify-center">
@@ -95,70 +105,27 @@ const Home: NextPage = () => {
                 </div>
                 <div className="opacity-70">Vancouver, British Columbia</div>
               </h4>
-              <Terminal
-                className="rounded-xl bg-light p-5 text-green-500"
-                bodyClassName="code-font text-base pt-5 text-left xs:text-lg md:text-[24px]"
-                variant="dark"
-              >
-                <div>/*</div>As a highly motivated and versatile programmer, I bring a unique
-                combination of technical expertise and creative problem-solving skills to every
-                project I take on. Whether I&apos;m coding for work, school, or just for fun, I
-                approach every challenge with a passion for learning and a drive to constantly
-                improve. I find fulfillment in exploring new and innovative ways to tackle problems
-                and I take pride in getting to the heart of how things work.
-                <div>*/</div>
-              </Terminal>
             </div>
           </div>
-          <div className="skills h-screen w-full max-w-4xl pt-[140px] pb-20">
-            <div className="z-10 text-center text-2xl font-medium text-white md:text-3xl">
-              I can do
-            </div>
+          <div className="skills h-[500px] w-full max-w-4xl">
             <div className="card relative h-full w-full">
               <div className="backface-hidden front absolute inset-0 m-7">
-                <div className="h-full rounded-xl bg-white p-5">
-                  <div className="mb-3 flex flex-row gap-3">
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear hover:opacity-70"></div>
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70"></div>
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
-                  </div>
-                  <div className="border-b-2 border-gray-200 pt-2"></div>
-                  <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
-                    <h1 className="w-full pt-2 text-center text-4xl font-bold">Front End</h1>
-                    <div className="pb-text-base max-w-lg pt-5 text-center font-medium xs:text-lg md:text-[24px]">
-                      As an individual with a Bachelor&apos;s Degree in Computer Science and over 3
-                      years of professional experience in developing a diverse range of
-                      applications, I possess the ability to swiftly construct and design user
-                      interfaces that are both purposeful and captivating, while also being
-                      optimized for performance.
-                    </div>
-                  </div>
-                </div>
+                <Terminal
+                  variant="light"
+                  headerText="Front End"
+                  bodyText="With a Bachelor's in Computer Science and 3+ years of experience, I create high-performance, engaging user interfaces. I specialize in intuitive design, optimizing for speed, and delivering user-focused experiences that combine both style and functionality across diverse applications."
+                />
               </div>
               <div className="backface-hidden back absolute inset-0 m-7">
-                <div className="h-full rounded-xl bg-light p-5 text-white">
-                  <div className="mb-3 flex flex-row gap-3">
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FF5F56] transition duration-200 ease-linear  hover:opacity-70"></div>
-                    <div className="hver:opacity-70 h-[14px] w-[14px] cursor-pointer rounded-full bg-[#FFBD2E] transition duration-200 ease-linear hover:opacity-70"></div>
-                    <div className="h-[14px] w-[14px] cursor-pointer rounded-full bg-[#27C93F] transition duration-200 ease-linear hover:opacity-70"></div>
-                  </div>
-                  <div className="border-b-2 border-dark pt-2"></div>
-                  <div className="flex h-full flex-col items-center justify-center gap-10 pb-7">
-                    <h1 className="w-full text-center text-4xl font-bold">Back End</h1>
-                    <div className="pb-text-base max-w-lg pt-5 text-center xs:text-lg md:text-[24px]">
-                      As a seasoned developer proficient in Node.js backends, I possess the ability
-                      to adeptly leverage serverless or hosted backends in tandem with either
-                      relational or non-relational databases, to effectively construct and deliver
-                      robust RESTful APIs. In addition, I am well-versed in optimizing testing and
-                      deployment pipelines for applications through the utilization of Docker and
-                      GitHub Actions.
-                    </div>
-                  </div>
-                </div>
+                <Terminal
+                  variant="dark"
+                  headerText="Back End"
+                  bodyText="Specializing in Node.js, I build scalable backends using serverless or hosted setups with relational and non-relational databases. I deliver robust RESTful APIs and optimize testing and deployment pipelines with Docker and GitHub Actions for seamless automation."
+                />
               </div>
             </div>
           </div>
-          <div className="pt-[100vh] text-center font-medium">
+          <div className="experience-header z-50 pt-[550px] text-center font-medium">
             <h3 className="text-4xl font-bold text-white">Experience</h3>
           </div>
           <ExperienceItem
@@ -176,7 +143,6 @@ const Home: NextPage = () => {
           >
             <ul className="flex max-w-md list-disc flex-col gap-5 pt-2 text-base sm:text-lg">
               <li>Developed the front end of our application with React and Next.js</li>
-              <li>Wrote unit and integration tests using Jest with 90% app coverge</li>
               <li>
                 Enforced code quality standards by developing Continuous Integration and Continuous
                 Delivery automation pipelines with GitHub Actions and Docker
@@ -391,6 +357,7 @@ const Home: NextPage = () => {
             <div className="absolute inset-x-0 bottom-0 h-2/3 w-full bg-gradient-to-t from-[#1cb0ac] to-transparent"></div>
           </div> */}
           <ExperienceItem
+            id="jusaves"
             src="/assets/cpd.png"
             title="Jusaves"
             width={100}
