@@ -38,11 +38,6 @@ export const ProjectItem = ({
   };
 
   const handleClick = () => {
-    if (!isOpen) {
-      setTimeout(() => {
-        dropdownRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 200);
-    }
     setIsOpen(!isOpen);
   };
 
