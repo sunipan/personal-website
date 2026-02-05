@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { getUniqueId } from '../../lib/utils';
-import { ExperienceProps } from './ExperienceItem.types';
+import type { ExperienceProps } from './ExperienceItem.types';
 
 const gradientColors = {
   rave: 'from-[#f9f9f9]',

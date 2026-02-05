@@ -1,5 +1,5 @@
 import { cn } from '../../lib/utils';
-import { TerminalProps } from './Terminal.types';
+import type { TerminalProps } from './Terminal.types';
 
 export const Terminal = ({ headerText, bodyText, variant }: TerminalProps) => {
   return (

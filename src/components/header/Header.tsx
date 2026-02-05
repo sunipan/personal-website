@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { HeaderProps } from './Header.types';
+import type { HeaderProps } from './Header.types';
 
 export const Header = ({ title, description, commentStyle }: HeaderProps) => {
   return (

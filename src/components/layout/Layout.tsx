@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { LayoutProps } from './Layout.types';
+import type { LayoutProps } from './Layout.types';
 
 export const Layout = ({ children, className, title }: LayoutProps) => {
   return (
