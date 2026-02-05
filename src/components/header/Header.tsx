@@ -15,7 +15,7 @@ export const Header = ({ title, description, commentStyle }: HeaderProps) => {
               alt=""
             />
           </div>
-          <div className="bar-slide lg:w- flex w-[30px] shrink-0 justify-center font-bold md:w-[40px]">
+          <div className="bar-slide flex w-[30px] shrink-0 justify-center font-bold md:w-[40px] lg:w-[50px]">
             <div className="h-[60px] w-[6px] rounded-sm bg-gradient-to-t from-blue-500 to-red-500 xs:h-[70px] md:h-[100px] md:w-[12px] lg:h-[125px]"></div>
           </div>
           <div className="expand-section w-0 overflow-hidden whitespace-nowrap text-center text-white opacity-0">

@@ -178,7 +178,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex justify-center">
             <div className="hello max-w-4xl p-7">
-              <h1 className="x:text-[28px] text-[26px] font-bold text-white md:text-[40px] lg:text-[52px]">
+              <h1 className="text-[26px] font-bold text-white xs:text-[28px] md:text-[40px] lg:text-[52px]">
                 Hi, I&apos;m Sebi Unipan <span className="wave">👋</span>
               </h1>
               <h4 className="mb-5 flex flex-row items-center justify-start text-lg italic text-white">
