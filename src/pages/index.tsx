@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import type { NextPage } from 'next';
@@ -11,7 +12,6 @@ import { Header } from '../components/header/Header';
 import { Layout } from '../components/layout';
 import { ProjectItem } from '../components/project/ProjectItem';
 import { Terminal } from '../components/terminal/Terminal';
-import { useIsomorphicLayoutEffect } from '../lib/useIsomorphicLayoutEffect';
 import { getUniqueId } from '../lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -99,9 +99,10 @@ const companyInfo: ExperienceProps[] = [
 const Home: NextPage = () => {
   /* State */
   const main = useRef<HTMLDivElement>(null);
-  useIsomorphicLayoutEffect(() => {
-    // For animating the first terminal
-    const ctx = gsap.context(() => {
+
+  useGSAP(
+    () => {
+      // For animating the first terminal
       gsap.from('.hello', {
         opacity: 0,
         y: 40,
@@ -152,10 +153,9 @@ const Home: NextPage = () => {
           pinSpacing: false,
         });
       });
-    }, main);
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: main },
+  );
 
   return (
     <>
