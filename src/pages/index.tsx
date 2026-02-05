@@ -170,7 +170,7 @@ const Home: NextPage = () => {
             <Image
               src="/assets/selfie.jpg"
               className="rounded-full"
-              objectFit="cover"
+              style={{ objectFit: 'cover' }}
               height={3088}
               width={2316}
               priority
