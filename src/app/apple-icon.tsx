@@ -18,42 +18,41 @@ export default function AppleIcon() {
           borderRadius: 32,
         }}
       >
-        {/* Left chevron */}
-        <span
-          style={{
-            fontSize: 60,
-            color: 'rgba(255,255,255,0.4)',
-            fontFamily: 'monospace',
-            marginRight: -5,
-          }}
-        >
-          {'<'}
-        </span>
-        
-        {/* Gradient bar */}
-        <div
-          style={{
-            width: 12,
-            height: 80,
-            background: 'linear-gradient(180deg, #3b82f6 0%, #ef4444 100%)',
-            borderRadius: 4,
-            margin: '0 2px',
-          }}
-        />
-        
-        {/* Right chevron */}
-        <span
-          style={{
-            fontSize: 60,
-            color: 'rgba(255,255,255,0.4)',
-            fontFamily: 'monospace',
-            marginLeft: -5,
-          }}
-        >
-          {'>'}
-        </span>
+        <svg width="140" height="140" viewBox="0 0 512 512">
+          <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="100%" stopColor="#ef4444" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M190 175 L110 256 L190 337"
+            stroke="rgba(255,255,255,0.35)"
+            strokeWidth="22"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <rect
+            x="242"
+            y="138"
+            width="28"
+            height="236"
+            rx="14"
+            fill="url(#g)"
+            transform="rotate(15, 256, 256)"
+          />
+          <path
+            d="M322 175 L402 256 L322 337"
+            stroke="rgba(255,255,255,0.35)"
+            strokeWidth="22"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     ),
-    { ...size }
+    { ...size },
   );
 }

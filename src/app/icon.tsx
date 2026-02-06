@@ -18,16 +18,41 @@ export default function Icon() {
           borderRadius: 6,
         }}
       >
-        <div
-          style={{
-            width: 4,
-            height: 20,
-            background: 'linear-gradient(180deg, #3b82f6 0%, #ef4444 100%)',
-            borderRadius: 2,
-          }}
-        />
+        <svg width="28" height="28" viewBox="0 0 512 512">
+          <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="100%" stopColor="#ef4444" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M190 175 L110 256 L190 337"
+            stroke="rgba(255,255,255,0.35)"
+            strokeWidth="40"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <rect
+            x="242"
+            y="138"
+            width="28"
+            height="236"
+            rx="14"
+            fill="url(#g)"
+            transform="rotate(15, 256, 256)"
+          />
+          <path
+            d="M322 175 L402 256 L322 337"
+            stroke="rgba(255,255,255,0.35)"
+            strokeWidth="40"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
     ),
-    { ...size }
+    { ...size },
   );
 }
