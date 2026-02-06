@@ -22,7 +22,7 @@ export type Project = {
 export const personal = {
   name: 'Sebi Unipan',
   role: 'Software Engineer',
-  tagline: 'Software engineer. Systems thinker. Problem solver.',
+  tagline: 'Software engineer. Problem solver. Builder.',
   location: 'Vancouver, British Columbia',
   email: 'sunipan@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sebi-unipan/',

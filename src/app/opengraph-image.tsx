@@ -25,14 +25,15 @@ export default async function Image() {
             'radial-gradient(circle at 25% 25%, #1a1a2e 0%, transparent 50%), radial-gradient(circle at 75% 75%, #16213e 0%, transparent 50%)',
         }}
       >
-        {/* Code brackets */}
+        {/* Code brackets with name */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '20px',
+            gap: '16px',
           }}
         >
+          {/* Left chevron < */}
           <span
             style={{
               fontSize: 80,
@@ -42,14 +43,19 @@ export default async function Image() {
           >
             {'<'}
           </span>
+          
+          {/* Gradient slash / - rotated bar */}
           <div
             style={{
-              width: 8,
-              height: 100,
+              width: 10,
+              height: 110,
               background: 'linear-gradient(180deg, #3b82f6 0%, #ef4444 100%)',
-              borderRadius: 4,
+              borderRadius: 5,
+              transform: 'rotate(15deg)',
             }}
           />
+          
+          {/* Name */}
           <span
             style={{
               fontSize: 72,
@@ -60,6 +66,8 @@ export default async function Image() {
           >
             Sebi Unipan
           </span>
+          
+          {/* Right chevron > */}
           <span
             style={{
               fontSize: 80,
@@ -80,7 +88,7 @@ export default async function Image() {
             fontFamily: 'monospace',
           }}
         >
-          /* Software engineer. Systems thinker. Problem solver. */
+          /* Software engineer. Problem solver. Builder. */
         </div>
 
         {/* Skills */}
