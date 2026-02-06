@@ -26,6 +26,7 @@ export const personal = {
   linkedin: 'https://www.linkedin.com/in/sebi-unipan/',
   github: 'https://github.com/sunipan',
   website: 'sebiunipan.com',
+  resumeUrl: 'https://riftrstore.cc/Sebi%20Unipan%20-%20Resume.pdf',
   education: {
     school: 'University of British Columbia',
     degree: 'Bachelor of Science in Computer Science',
@@ -62,7 +63,7 @@ export const experiences: Experience[] = [
       'Implemented hall pass and behavioral points features with complex time-based logic, serving 20K+ students and teachers daily',
       'Identified and resolved 10+ UI bugs through QA collaboration, improving cross-device compatibility',
     ],
-    color: '#1c2f59',
+    color: '#5b8def',
   },
   {
     company: 'Atomic47 Labs',
@@ -97,9 +98,25 @@ export const projects: Project[] = [
     name: 'PharmaPal',
     tech: ['Next.js', 'React', 'TypeScript', 'Prisma', 'MongoDB', 'Vercel'],
     description:
-      'Led 4-person capstone team as technical lead, winning competition against 2 other teams. Architected full-stack application with Next.js, Prisma ORM, and MongoDB. Delivered production-ready application in 8-week timeline.',
+      'An intuitive web app for assisting users with picking the right over-the-counter medicine for their exact symptoms. Led 4-person capstone team as technical lead, winning competition against 2 other teams.',
     link: 'https://pharmapal.vercel.app/',
     award: 'Won $100/person prize',
+  },
+  {
+    name: 'Chat Bot',
+    tech: ['Python', 'SciKit-Learn', 'NLTK'],
+    description:
+      'A psychiatrist chat bot designed to give users support through natural responses, built with machine learning and natural language processing.',
+    link: 'https://github.com/sunipan/Chat-Bot',
+    isRepo: true,
+  },
+  {
+    name: 'GPU Bot',
+    tech: ['Python', 'BeautifulSoup'],
+    description:
+      'A bot that automatically checks for GPU availability on the Best Buy website, built during the GPU shortage to help users snag hard-to-find graphics cards.',
+    link: 'https://github.com/sunipan/GPU-Bot',
+    isRepo: true,
   },
 ];
 
