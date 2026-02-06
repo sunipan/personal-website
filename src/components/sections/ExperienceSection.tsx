@@ -1,6 +1,21 @@
 import { experiences } from '@/data/portfolio';
 import { Reveal } from '@/components/reveal/Reveal';
 
+// Parse text with **bold** markers into React elements
+function formatBoldText(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-semibold text-white/90">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export function ExperienceSection() {
   return (
     <section
@@ -64,7 +79,7 @@ export function ExperienceSection() {
                     className="relative mb-1.5 pl-4 text-sm leading-[1.7] text-white/65 max-md:text-[13px] max-xs:text-xs max-xs:leading-[1.6]"
                   >
                     <span className="absolute left-0 text-white/25">›</span>
-                    {b}
+                    {formatBoldText(b)}
                   </li>
                 ))}
               </ul>

@@ -1,6 +1,21 @@
 import { projects } from '@/data/portfolio';
 import { Reveal } from '@/components/reveal/Reveal';
 
+// Parse text with **bold** markers into React elements
+function formatBoldText(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-semibold text-white/90">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export function ProjectsSection() {
   return (
     <section
@@ -52,7 +67,7 @@ export function ProjectsSection() {
                     className="flex gap-2 text-sm leading-[1.7] text-white/60 max-xs:text-[13px]"
                   >
                     <span className="text-accent-green/60">›</span>
-                    <span>{bullet}</span>
+                    <span>{formatBoldText(bullet)}</span>
                   </li>
                 ))}
               </ul>
