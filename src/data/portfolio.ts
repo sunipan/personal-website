@@ -162,5 +162,6 @@ export const skills = {
     'Agile/Scrum',
     'Unit Testing',
     'State Management',
+    'OOP',
   ],
 };
