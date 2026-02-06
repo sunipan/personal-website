@@ -26,7 +26,7 @@ export const personal = {
   linkedin: 'https://www.linkedin.com/in/sebi-unipan/',
   github: 'https://github.com/sunipan',
   website: 'sebiunipan.com',
-  resumeUrl: 'https://riftrstore.cc/Sebi%20Unipan%20-%20Resume.pdf',
+  resumeUrl: '/resume',
   education: {
     school: 'University of British Columbia',
     degree: 'Bachelor of Science in Computer Science',
