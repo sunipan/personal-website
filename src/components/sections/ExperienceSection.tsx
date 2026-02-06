@@ -37,7 +37,7 @@ export function ExperienceSection() {
             <div className="relative mb-9 max-xs:mb-9">
               {/* Timeline dot */}
               <div
-                className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-surface max-md:-left-[24px] max-md:h-2.5 max-md:w-2.5 max-xs:-left-[21px] max-xs:h-2 max-xs:w-2"
+                className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-surface max-md:-left-[26px] max-md:h-2.5 max-md:w-2.5 max-xs:-left-[21px] max-xs:h-2 max-xs:w-2"
                 style={{
                   background: exp.color,
                   boxShadow: `0 0 10px ${exp.color}66`,
