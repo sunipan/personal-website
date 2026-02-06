@@ -1,12 +1,39 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 const sections = ['Home', 'Skills', 'Experience', 'Projects', 'Contact'];
 
-type NavDotsProps = {
-  active: number;
-};
+export function NavDots() {
+  const [active, setActive] = useState(0);
 
-export function NavDots({ active }: NavDotsProps) {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionEls = sections.map((s) => document.getElementById(s.toLowerCase()));
+      const scrollY = window.scrollY + window.innerHeight * 0.35;
+
+      const nearBottom =
+        window.scrollY + window.innerHeight >= document.body.scrollHeight - 100;
+      if (nearBottom) {
+        setActive(sections.length - 1);
+        return;
+      }
+
+      let current = 0;
+      for (let i = 0; i < sectionEls.length; i++) {
+        const el = sectionEls[i];
+        if (el && el.offsetTop <= scrollY) {
+          current = i;
+        }
+      }
+      setActive(current);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav className="fixed right-20 top-1/2 z-[100] hidden -translate-y-1/2 flex-col items-end gap-4 lg:flex">
       {sections.map((s, i) => (
@@ -38,5 +65,3 @@ export function NavDots({ active }: NavDotsProps) {
     </nav>
   );
 }
-
-export { sections };
