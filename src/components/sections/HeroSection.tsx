@@ -1,5 +1,3 @@
-'use client';
-
 import { personal } from '@/data/portfolio';
 import { HeroAnimation } from '@/components/hero-animation/HeroAnimation';
 

@@ -1,5 +1,3 @@
-'use client';
-
 import { experiences } from '@/data/portfolio';
 import { Reveal } from '@/components/reveal/Reveal';
 
