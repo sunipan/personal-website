@@ -24,9 +24,9 @@ export function SkillsSection() {
 
       <div className="grid w-full max-w-[1000px] grid-cols-2 gap-6 max-md:grid-cols-1 max-md:gap-4 max-xs:gap-3">
         {skillCategories.map(({ title, items, color }, gi) => (
-          <Reveal key={title} delay={gi * 0.1}>
+          <Reveal key={title} delay={gi * 0.1} className="h-full max-md:h-auto">
             <div
-              className="rounded-2xl border border-white/[0.06] bg-surface-raised p-7 transition-all duration-300 hover:-translate-y-1 max-md:p-5 max-xs:p-4"
+              className="h-full rounded-2xl border border-white/[0.06] bg-surface-raised p-7 transition-all duration-300 hover:-translate-y-1 max-md:p-5 max-xs:p-4"
               style={{
                 ['--accent' as string]: color,
               }}
