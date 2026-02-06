@@ -23,9 +23,14 @@ export function ProjectsSection() {
           >
             {/* Header */}
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <h3 className="text-[22px] font-semibold max-md:text-[19px] max-xs:text-[17px]">
-                {p.name}
-              </h3>
+              <div className="flex items-center gap-3">
+                <h3 className="text-[22px] font-semibold max-md:text-[19px] max-xs:text-[17px]">
+                  {p.name}
+                </h3>
+                {p.date && (
+                  <span className="font-mono text-xs text-white/40">{p.date}</span>
+                )}
+              </div>
               <div className="flex items-center gap-2">
                 {p.award && (
                   <span className="rounded-md border border-accent-green/30 bg-accent-green/10 px-2.5 py-1 font-mono text-[11px] text-accent-green max-xs:text-[10px]">
@@ -38,10 +43,24 @@ export function ProjectsSection() {
               </div>
             </div>
 
-            {/* Description */}
-            <p className="mb-4 text-sm leading-[1.7] text-white/60 max-xs:text-[13px]">
-              {p.description}
-            </p>
+            {/* Description or Bullets */}
+            {p.bullets ? (
+              <ul className="mb-4 space-y-2">
+                {p.bullets.map((bullet, idx) => (
+                  <li
+                    key={idx}
+                    className="flex gap-2 text-sm leading-[1.7] text-white/60 max-xs:text-[13px]"
+                  >
+                    <span className="text-accent-green/60">›</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mb-4 text-sm leading-[1.7] text-white/60 max-xs:text-[13px]">
+                {p.description}
+              </p>
+            )}
 
             {/* Tech tags */}
             <div className="flex flex-wrap gap-1.5">
