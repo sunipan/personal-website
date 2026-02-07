@@ -106,7 +106,7 @@ export const projects: Project[] = [
       'Mentored 3 teammates on React and TypeScript best practices while managing sprint execution, **delivering production-ready application in 8-week timeline**',
     ],
     link: 'https://pharmapal.vercel.app/',
-    award: 'Won $100/person prize',
+    award: 'Winning Project · Cash Prize',
     date: '2022 – 2023',
   },
   {

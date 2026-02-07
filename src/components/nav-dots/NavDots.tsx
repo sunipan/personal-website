@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const sections = ['Home', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'];
+const sections = ['Home', 'Skills', 'Experience', 'Education', 'Projects', 'Contact'];
 
 export function NavDots() {
   const [active, setActive] = useState(0);
