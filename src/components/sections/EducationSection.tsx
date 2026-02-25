@@ -7,7 +7,7 @@ export function EducationSection() {
   return (
     <section
       id="education"
-      className="relative z-2 flex flex-col items-center px-6 py-28 max-md:py-[84px] max-xs:px-4 max-xs:py-16"
+      className="relative z-2 flex min-h-[70vh] flex-col items-center justify-center px-6 py-28 max-md:py-[84px] max-xs:px-4 max-xs:py-16"
     >
       <Reveal>
         <h2 className="mb-10 text-center text-[clamp(28px,5vw,48px)] font-bold max-xs:mb-8 max-xs:text-2xl">
