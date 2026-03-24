@@ -48,8 +48,14 @@ export function ProjectsSection() {
               </div>
               <div className="flex items-center gap-2">
                 {p.award && (
-                  <span className="rounded-md border border-accent-green/30 bg-accent-green/10 px-2.5 py-1 font-mono text-[11px] text-accent-green max-xs:text-[10px]">
-                    🏆 {p.award}
+                  <span
+                    className={`rounded-md border px-2.5 py-1 font-mono text-[11px] max-xs:text-[10px] ${
+                      p.awardColor === 'amber'
+                        ? 'border-accent-amber/30 bg-accent-amber/10 text-accent-amber'
+                        : 'border-accent-green/30 bg-accent-green/10 text-accent-green'
+                    }`}
+                  >
+                    {p.awardColor === 'amber' ? '🚀' : '🏆'} {p.award}
                   </span>
                 )}
                 <span className="font-mono text-xs text-white/40 transition-colors duration-300 group-hover:text-accent-green">

@@ -16,6 +16,7 @@ export type Project = {
   link: string;
   isRepo?: boolean;
   award?: string;
+  awardColor?: 'green' | 'amber';
   date?: string;
 };
 
@@ -97,6 +98,20 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: 'Riftr.io',
+    tech: ['Next.js', 'TypeScript', 'Drizzle', 'PostgreSQL', 'Cloudflare R2', 'Clerk'],
+    bullets: [
+      'Built and deployed a **temporary file sharing service** where files are encrypted in the browser before they ever leave your machine — share anything with a 6-character code, no account required',
+      'Engineered a **custom multipart upload pipeline** with presigned URLs, 3-concurrent-part async pooling, and byte-level progress tracking, **supporting files up to 500MB**',
+      'Implemented **envelope encryption (AES-256-GCM)** with server-wrapped DEKs and OTP-protected rooms — the server stores encrypted blobs and wrapped keys but **can never read your files**',
+      'Hardened with **tiered rate limiting via Upstash Redis**, HMAC-SHA256 OTP hashing, and automated cleanup via GitHub Actions cron — built to withstand brute-force enumeration',
+    ],
+    link: 'https://riftr.io',
+    award: 'Live',
+    awardColor: 'amber',
+    date: '2025',
+  },
   {
     name: 'PharmaPal',
     tech: ['Next.js', 'React', 'TypeScript', 'Prisma', 'MongoDB', 'Vercel'],
