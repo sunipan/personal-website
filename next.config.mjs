@@ -1,18 +1,14 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
-export default {
+const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/resume',
-        destination: 'https://riftrstore.cc/Sebi%20Unipan%20-%20Resume.pdf',
-        permanent: false, // 307 redirect - keeps the destination hidden from casual inspection
-      },
-      {
-        source: '/resume.pdf',
-        destination: 'https://riftrstore.cc/Sebi%20Unipan%20-%20Resume.pdf',
-        permanent: false,
-      },
-    ];
+  turbopack: {
+    root: projectRoot,
   },
 };
+
+export default nextConfig;

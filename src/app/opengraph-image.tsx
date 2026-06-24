@@ -104,7 +104,7 @@ export default async function Image() {
             letterSpacing: '0.02em',
           }}
         >
-          /* Software engineer. Problem solver. Builder. */
+          {'/* Software engineer. Problem solver. Builder. */'}
         </div>
 
         {/* Skills */}

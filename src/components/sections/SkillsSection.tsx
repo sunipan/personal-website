@@ -5,9 +5,9 @@ import { Reveal } from '@/components/reveal/Reveal';
 
 const skillCategories = [
   { title: 'Languages', items: skills.languages, color: '#3b82f6' },
-  { title: 'Frameworks', items: skills.frameworks, color: '#ef4444' },
-  { title: 'Tools', items: skills.tools, color: '#22c55e' },
-  { title: 'Concepts', items: skills.concepts, color: '#f59e0b' },
+  { title: 'Frontend & Mobile', items: skills.frontendMobile, color: '#ef4444' },
+  { title: 'Backend & Data', items: skills.backendData, color: '#22c55e' },
+  { title: 'Cloud & Engineering', items: skills.cloudEngineering, color: '#f59e0b' },
 ] as const;
 
 export function SkillsSection() {
