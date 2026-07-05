@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
       "Architected and shipped Rave's Android Friends Page as **1 of 2 Android engineers**, establishing implementation patterns adopted by iOS/Desktop teams and contributing to **100K+ MAU growth** on an **800K DAU** platform",
       'Led partner communication and Android ad/monetization integrations, driving **20% revenue growth**',
       'Owned Android content-provider expansion for Rave, adding Crunchyroll, Pluto TV, VK, RuTube, X/Twitter, YouTube Live/Twitch, and real-time live chat while hardening playback, authentication, metadata, subtitles, and provider edge cases',
-      "Revamped the Google Drive provider from legacy to modern architecture with **3-tier fallback streaming** and network-adaptive quality selection, improving playback reliability for one of the platform's most popular sources",
+      "Spearheaded Iris, Rave's first reusable, liveness-based Android age-verification SDK, combining CameraX, ML Kit face detection, and custom UI to move beyond bypassable DoB checks and help prevent underage access to mature content",
       "Refactored legacy Java/Kotlin components as part of Rave's single-Activity Kotlin rearchitecture, replacing Activity-coupled callbacks, Java threading, null/lifecycle guards, and boilerplate with Fragments, ViewModels, coroutines/Flow, structured concurrency, and Kotlin extensions",
       'Diagnosed critical memory leaks in third-party SDK integrations and coordinated fixes with external teams, helping maintain **97%+ crash-free rate**',
     ],
